@@ -10,7 +10,7 @@ export default function HomeWrapper({
   return (
     <div
       className="relative overflow-hidden"
-      style={{ height: "calc(100vh - 5rem)" }}
+      //   style={{ height: "calc(100vh - 5rem)" }}
     >
       {/* Background */}
       <div className="absolute inset-0 pointer-events-none">
