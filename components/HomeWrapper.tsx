@@ -1,0 +1,35 @@
+"use client";
+
+import Particles from "./Particles";
+
+export default function HomeWrapper({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <div
+      className="relative overflow-hidden"
+      style={{ height: "calc(100vh - 5rem)" }}
+    >
+      {/* Background */}
+      <div className="absolute inset-0 pointer-events-none">
+        <Particles
+          particleColors={["#ffffff", "#ffffff"]}
+          particleCount={400}
+          particleSpread={10}
+          speed={0.08}
+          particleBaseSize={100}
+          moveParticlesOnHover={false}
+          alphaParticles={true}
+          disableRotation={false}
+        />
+      </div>
+
+      {/* Page content */}
+      <div className="relative h-full flex flex-col justify-center items-start max-w-7xl mx-auto">
+        {children}
+      </div>
+    </div>
+  );
+}
