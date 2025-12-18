@@ -141,7 +141,7 @@ const Contact = () => {
 
               <button
                 type="submit"
-                className="flex justify-center items-center gap-2 py-3 px-6 rounded-3xl border border-white/20 text-lg md:text-xl font-medium bg-transparent text-white w-full cursor-pointer"
+                className="flex justify-center items-center gap-2 py-3 px-6 rounded-lg border border-white/20 text-lg md:text-xl font-medium text-white w-full cursor-pointer bg-white/10"
               >
                 Send Message
               </button>

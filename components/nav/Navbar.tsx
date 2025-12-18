@@ -1,7 +1,9 @@
 "use client";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { RiArrowRightDoubleFill } from "react-icons/ri";
+import brand from "@/public/images/brand.png";
 
 const navLinks = [
   { name: "Home", href: "/" },
@@ -18,9 +20,12 @@ const Navbar = () => {
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3">
           <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-white">
-            <div
-              className="h-7 w-7 rotate-12 bg-[#1a1d2e]"
-              style={{ clipPath: "polygon(0 0, 100% 0, 100% 100%)" }}
+            <Image
+              src={brand}
+              width={40}
+              height={40}
+              alt="Brand"
+              className="rounded-lg"
             />
           </div>
           <span className="text-2xl font-semibold text-white playfair">
@@ -45,7 +50,7 @@ const Navbar = () => {
         {/* CTA Button */}
         <Link
           href="/hire"
-          className="flex items-center gap-2 py-2 px-4 rounded-2xl border border-white/20 text-xl font-medium bg-transparent text-white"
+          className="flex items-center gap-2 py-2 px-4 rounded-2xl border border-white/20 text-xl font-medium  text-white bg-white/10"
         >
           Hire Me
           <RiArrowRightDoubleFill className="h-4 w-4" />
