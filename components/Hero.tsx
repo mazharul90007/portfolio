@@ -32,6 +32,7 @@ const Hero = () => {
           View Resume
           <LuDownload className="" />
         </Link>
+        <div></div>
       </div>
 
       {/* Image */}

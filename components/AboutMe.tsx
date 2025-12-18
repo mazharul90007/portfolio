@@ -1,3 +1,4 @@
+"use client";
 interface AboutItem {
   label: string;
   value: string;
@@ -40,9 +41,9 @@ const AboutMe = () => {
         {aboutData.map((item, index) => (
           <div
             key={index}
-            className="flex items-center text-white/90 justify-between border-b border-gray-300/50 py-4"
+            className="flex items-center text-white/90 justify-between border-b border-gray-300/50 py-2"
           >
-            <div className="inline-flex items-center rounded-md border border-white/20 px-6 py-2 text-base font-medium text-white">
+            <div className="inline-flex text-base items-center rounded-md border border-white/20 px-6 py-2  font-medium text-white">
               {item.label}
             </div>
             <div className="text-right text-lg text-white/50 font-medium">

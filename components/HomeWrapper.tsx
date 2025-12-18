@@ -16,7 +16,7 @@ export default function HomeWrapper({
       <div className="absolute inset-0 pointer-events-none">
         <Particles
           particleColors={["#ffffff", "#ffffff"]}
-          particleCount={400}
+          particleCount={1500}
           particleSpread={10}
           speed={0.08}
           particleBaseSize={100}
