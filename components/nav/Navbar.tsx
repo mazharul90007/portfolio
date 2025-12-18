@@ -5,10 +5,9 @@ import { RiArrowRightDoubleFill } from "react-icons/ri";
 
 const navLinks = [
   { name: "Home", href: "/" },
-  { name: "Education", href: "/education" },
   { name: "Projects", href: "/projects" },
-  { name: "Contact", href: "/contact" },
   { name: "Blog", href: "/blog" },
+  { name: "Contact", href: "/contact" },
 ];
 
 const Navbar = () => {
