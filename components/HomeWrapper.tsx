@@ -8,10 +8,7 @@ export default function HomeWrapper({
   children: React.ReactNode;
 }) {
   return (
-    <div
-      className="relative overflow-hidden"
-      //   style={{ height: "calc(100vh - 5rem)" }}
-    >
+    <div className="relative overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 pointer-events-none">
         <Particles
@@ -27,7 +24,7 @@ export default function HomeWrapper({
       </div>
 
       {/* Page content */}
-      <div className="relative h-full flex flex-col justify-center items-start max-w-7xl mx-auto">
+      <div className="relative h-full flex flex-col justify-center items-start max-w-7xl mx-auto px-4 xl:px-0">
         {children}
       </div>
     </div>

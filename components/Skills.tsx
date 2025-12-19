@@ -108,7 +108,7 @@ const Skills = () => {
                   <Icon className="w-7 h-7" />
                   {category}
                 </h3>
-                <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-2">
+                <div className="grid grid-cols-2 xl:grid-cols-3 gap-2">
                   {skillList.map((skill) => {
                     const SkillIcon = skill.icon;
 

@@ -24,8 +24,8 @@ const Contact = () => {
 
     try {
       await emailjs.send(
-        "service_qhxicgg",
-        "template_sixmgpf",
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_KEY as string,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_KEY as string,
         {
           from_name: formData.name,
           from_email: formData.email,
@@ -68,6 +68,7 @@ const Contact = () => {
                 <h2 className="text-2xl font-semibold text-white/90">
                   Mazharul Islam Sourabh
                 </h2>
+
                 <p className="text-white/50 text-lg font-medium">
                   Full Stack Web Developer
                 </p>

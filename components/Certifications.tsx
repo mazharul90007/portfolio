@@ -11,7 +11,7 @@ const Certifications = () => {
       <h2 className="text-5xl text-sub font-semibold mb-16">
         Industry-Recognized Skills & Credentials
       </h2>
-      <div className="w-full flex gap-4">
+      <div className="w-full flex flex-col md:flex-row gap-4">
         {/* =====================Programming Hero================= */}
         <div className="relative w-full overflow-hidden flex-1 p-4 rounded-lg border border-white/20">
           <ShineBorder shineColor={["#FFFFFF", "#3B82F6"]} />
