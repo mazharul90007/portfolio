@@ -2,12 +2,13 @@
 
 import Image from "next/image";
 import { FiExternalLink, FiGithub } from "react-icons/fi";
+import ezyTicket from "@/public/images/EzyTicket.webp";
 
 const projects = [
   {
     id: 1,
     image:
-      "https://res.cloudinary.com/dp6urj3gj/image/upload/v1765627636/bd-destinationERD_pftztz.png",
+      "https://res.cloudinary.com/dp6urj3gj/image/upload/v1766114389/EzyTicket_jg6den.webp",
     name: "Ezy Ticket",
     type: "Online Ticket Booking Website",
     description:
@@ -54,77 +55,89 @@ function Projects() {
       <h2 className="text-5xl text-sub font-semibold mb-16">
         A showcase of my work
       </h2>
-      <div className="space-y-14">
+      <div className="space-y-12">
         {projects.map((project, index) => (
           <div
             key={project.id}
-            className="group grid grid-cols-1 lg:grid-cols-2 gap-8 items-center bg-base-200 rounded-2xl p-6 md:p-8 shadow-md hover:shadow-xl transition-shadow"
+            className="shadow-md rounded-lg overflow-hidden border border-white/20 p-4"
           >
-            {/* Image */}
-            <div className="relative w-full h-[320px] md:h-[400px] overflow-hidden rounded-xl">
-              <Image
-                src={project.image}
-                alt={project.name}
-                fill
-                className="object-cover group-hover:scale-105 transition-transform duration-500"
-                sizes="(max-width: 768px) 100vw, 50vw"
-                priority={index === 0}
-              />
-            </div>
-
-            {/* Content */}
-            <div
-              className={`flex flex-col ${index % 2 !== 0 ? "lg:order-1" : ""}`}
-            >
-              <h3 className="text-2xl md:text-3xl font-bold">{project.name}</h3>
-              <p className="text-primary font-medium mt-1">{project.type}</p>
-
-              <p className="text-base-content/70 mt-4 leading-relaxed">
-                {project.description}
-              </p>
-
-              {/* Tech Stack */}
-              <div className="flex flex-wrap gap-2 mt-5">
-                {project.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="px-3 py-1 text-sm rounded-full border border-base-content/20 bg-base-100"
-                  >
-                    {tag}
-                  </span>
-                ))}
+            <div className="flex flex-col lg:flex-row gap-8">
+              {/* Image */}
+              <div
+                className={`w-full lg:w-7/12 h-[380px] lg:h-[450px] overflow-y-auto hide-scrollbar rounded-lg border border-white/10
+  ${index % 2 === 0 ? "lg:order-2" : "lg:order-1"}`}
+              >
+                <Image
+                  src={project.image}
+                  alt={project.name}
+                  width={1400}
+                  height={2000}
+                  quality={95}
+                  sizes="(max-width: 1024px) 100vw, 60vw"
+                  className="w-full h-auto"
+                  priority={index === 0}
+                />
               </div>
 
-              {/* Links */}
-              <div className="flex flex-wrap gap-3 mt-6">
-                <a
-                  href={project.liveLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-primary text-primary-content hover:opacity-90 transition"
-                >
-                  <FiExternalLink /> Live Demo
-                </a>
+              {/* Content */}
+              <div
+                className={`flex flex-col lg:w-5/12
+  ${index % 2 === 0 ? "lg:order-1" : "lg:order-2"}`}
+              >
+                <h3 className="text-2xl md:text-3xl font-bold">
+                  {project.name}
+                </h3>
+                <p className="text-white/90 text-lg font-medium mt-1">
+                  {project.type}
+                </p>
 
-                <a
-                  href={project.githubClient}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-base-content/30 hover:bg-base-300 transition"
-                >
-                  <FiGithub /> Client
-                </a>
+                <p className="text-white/50 text-lg mt-4 leading-relaxed">
+                  {project.description}
+                </p>
 
-                {project.githubServer && (
+                {/* Tech Stack */}
+                <div className="flex flex-wrap gap-2 mt-5">
+                  {project.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="px-3 py-1 text-sm rounded-full border border-white/20"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+
+                {/* Links */}
+                <div className="flex flex-wrap gap-3 mt-6">
                   <a
-                    href={project.githubServer}
+                    href={project.liveLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-base-content/30 hover:bg-base-300 transition"
+                    className="inline-flex items-center gap-2 px-4 py-2 border border-white/20 rounded-lg hover:bg-white/10 hover:scale-105  transition-transform duration-300"
                   >
-                    <FiGithub /> Server
+                    <FiExternalLink /> Live Demo
                   </a>
-                )}
+
+                  <a
+                    href={project.githubClient}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-4 py-2 border border-white/20 rounded-lg  hover:bg-white/10 hover:scale-105  transition-transform duration-300"
+                  >
+                    <FiGithub /> Client
+                  </a>
+
+                  {project.githubServer && (
+                    <a
+                      href={project.githubServer}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-white/20 hover:bg-white/10 hover:scale-105  transition-transform duration-300"
+                    >
+                      <FiGithub /> Server
+                    </a>
+                  )}
+                </div>
               </div>
             </div>
           </div>
