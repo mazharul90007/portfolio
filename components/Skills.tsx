@@ -90,7 +90,7 @@ const softSkills = [
 
 const Skills = () => {
   return (
-    <section className="py-12 w-full">
+    <section className="py-16 w-full">
       <div className="max-w-7xl mx-auto">
         <p className="text-white/50 font-medium text-xl md:text-2xl mb-4">
           <span className="mr-2">||</span>Tech Skills

@@ -2,16 +2,18 @@
 import Image from "next/image";
 import Link from "next/link";
 import { LuDownload } from "react-icons/lu";
-import { Play, SkipBack, SkipForward } from "lucide-react";
+// import { Play, SkipBack, SkipForward } from "lucide-react";
 import { BorderBeam } from "@/components/ui/border-beam";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+// import {
+//   Card,
+//   CardContent,
+//   CardDescription,
+//   CardFooter,
+//   CardHeader,
+//   CardTitle,
+// } from "@/components/ui/card";
+import { FaGithub, FaLinkedin, FaFacebook } from "react-icons/fa6";
+import { Target } from "lucide-react";
 
 const Hero = () => {
   return (
@@ -29,12 +31,40 @@ const Hero = () => {
           href="/resume/Resume_of_Sourabh.pdf"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-2 py-3 px-6 rounded-3xl border border-white/20 text-lg md:text-xl font-medium bg-transparent text-white w-fit cursor-pointer bg-white/10"
+          className="flex items-center gap-2 py-3 px-6 rounded-3xl border border-white/20 text-lg md:text-xl font-medium text-white w-fit cursor-pointer bg-white/10"
         >
           View Resume
-          <LuDownload className="" />
+          <LuDownload />
         </Link>
-        <div></div>
+        <div className="w-fit flex gap-4 p-2 border border-white/20 rounded-xl my-8 hover:scale-105 transition-transform duration-300">
+          <Link
+            href="https://github.com/mazharul90007"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div className="h-14 w-14 flex items-center justify-center rounded-xl border border-white/20 hover:scale-110 hover:bg-white/10 transition-transform duration-300 cursor-pointer">
+              <FaGithub size={32} />
+            </div>
+          </Link>
+          <Link
+            href="https://www.linkedin.com/in/misourabh"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div className="h-14 w-14 flex items-center justify-center rounded-xl border border-white/20 hover:scale-110 hover:bg-white/10 transition-transform duration-300 cursor-pointer">
+              <FaLinkedin size={32} />
+            </div>
+          </Link>
+          <Link
+            href="https://www.facebook.com/mazharul90005"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div className="h-14 w-14 flex items-center justify-center rounded-xl border border-white/20 hover:scale-110 hover:bg-white/10 transition-transform duration-300 cursor-pointer">
+              <FaFacebook size={32} />
+            </div>
+          </Link>
+        </div>
       </div>
 
       {/* Image */}

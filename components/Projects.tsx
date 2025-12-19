@@ -22,27 +22,23 @@ const projects = [
     id: 2,
     image:
       "https://res.cloudinary.com/dp6urj3gj/image/upload/v1765627636/bd-destinationERD_pftztz.png",
-    name: "NestTree",
-    type: "Real Estate Marketplace",
+    name: "BD-DESTINATION",
+    type: "BD Travel information website (server)",
     description:
-      "A dynamic marketplace where users can browse, list, and manage properties with admin and agent control.",
-    liveLink: "https://nesttree-d03bc.web.app/",
-    githubClient: "https://github.com/mazharul90007/nesttree-client",
-    githubServer: "https://github.com/mazharul90007/nesttree-server",
-    tags: ["React", "Firebase", "Node.js", "MongoDB", "Stripe"],
-  },
-  {
-    id: 3,
-    image:
-      "https://res.cloudinary.com/dp6urj3gj/image/upload/v1765627636/bd-destinationERD_pftztz.png",
-    name: "Recommendo",
-    type: "Product Recommendation Platform",
-    description:
-      "Users can request and suggest product recommendations with authentication and moderation features.",
-    liveLink: "https://recommendo-b1c90.web.app/",
-    githubClient: "https://github.com/mazharul90007/recommendo",
-    githubServer: "https://github.com/mazharul90007/recommendo-server",
-    tags: ["React", "Firebase", "Node.js", "MongoDB"],
+      "BD Destination is a travel guide platform built with Node.js, Express, and TypeScript, offering comprehensive information about beautiful tourist destinations in Bangladesh.",
+    liveLink: "https://bd-destination.vercel.app",
+    githubClient: "https://bd-destination.vercel.app",
+    githubServer: "https://github.com/mazharul90007/bd-destination",
+    tags: [
+      "Node.js",
+      "Express.js",
+      "TypeScript",
+      "Postgresql",
+      "Prisma",
+      "JWT",
+      "Zod",
+      "Cloudinary",
+    ],
   },
 ];
 

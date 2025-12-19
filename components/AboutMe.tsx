@@ -14,7 +14,7 @@ const aboutData: AboutItem[] = [
 
 const AboutMe = () => {
   return (
-    <div className="my-12">
+    <div className="py-16">
       <p className="text-white/50 font-medium text-xl md:text-2xl mb-4">
         <span className="mr-2">||</span>About Me
       </p>

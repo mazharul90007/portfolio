@@ -4,7 +4,7 @@ import { ShineBorder } from "@/components/ui/shine-border";
 
 const Education = () => {
   return (
-    <div className="my-12 w-full">
+    <div className="my-16 w-full">
       <p className="text-white/50 font-medium text-xl md:text-2xl mb-4">
         <span className="mr-2">||</span>Education
       </p>

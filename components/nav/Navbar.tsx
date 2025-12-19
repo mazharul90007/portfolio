@@ -49,10 +49,12 @@ const Navbar = () => {
         </div>
         {/* CTA Button */}
         <Link
-          href="/hire"
+          href="/resume/Resume_of_Sourabh.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
           className="flex items-center gap-2 py-2 px-4 rounded-2xl border border-white/20 text-xl font-medium  text-white bg-white/10"
         >
-          Hire Me
+          Resume
           <RiArrowRightDoubleFill className="h-4 w-4" />
         </Link>
       </div>

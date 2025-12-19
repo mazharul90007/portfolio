@@ -1,7 +1,7 @@
 "use client";
 const Experience = () => {
   return (
-    <section className="py-12 w-full">
+    <section className="py-16 w-full">
       <div className="">
         {/* Section Header */}
         <p className="text-white/50 font-medium text-xl md:text-2xl mb-2">
