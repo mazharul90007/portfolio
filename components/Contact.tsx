@@ -48,7 +48,7 @@ const Contact = () => {
         <p className="text-white/50 font-medium text-xl md:text-2xl mb-4">
           <span className="mr-2">||</span>Contact Me
         </p>
-        <h2 className="text-5xl text-sub font-semibold mb-16">
+        <h2 className="text-5xl text-sub font-semibold mb-8 md:mb-16">
           Let’s build something amazing together
         </h2>
 
@@ -57,7 +57,7 @@ const Contact = () => {
           {/* LEFT INFO */}
           <div className="flex flex-col md:flex-row">
             {/* Description Section */}
-            <div className="flex flex-col items-center p-6 shadow-md">
+            <div className="flex flex-col items-center p-4 md:p-6 shadow-md">
               {/* Image */}
               <div className="w-60 h-60">
                 <Lottie animationData={emailAnimation}></Lottie>
@@ -98,7 +98,7 @@ const Contact = () => {
             </div>
           </div>
           {/* RIGHT FORM */}
-          <div className="p-8">
+          <div className="p-2 md:p-8">
             <h3 className="text-2xl font-semibold mb-6 text-white/90">
               Send a Message
             </h3>

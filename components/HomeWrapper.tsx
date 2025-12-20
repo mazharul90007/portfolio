@@ -13,7 +13,7 @@ export default function HomeWrapper({
       <div className="absolute inset-0 pointer-events-none">
         <Particles
           particleColors={["#ffffff", "#ffffff"]}
-          particleCount={1500}
+          particleCount={2000}
           particleSpread={10}
           speed={0.08}
           particleBaseSize={100}
@@ -24,7 +24,7 @@ export default function HomeWrapper({
       </div>
 
       {/* Page content */}
-      <div className="relative h-full flex flex-col justify-center items-start max-w-7xl mx-auto px-4 xl:px-0">
+      <div className="relative h-full flex flex-col justify-center items-start max-w-7xl mx-auto px-2 xl:px-0">
         {children}
       </div>
     </div>

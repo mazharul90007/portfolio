@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { FiExternalLink, FiGithub } from "react-icons/fi";
-import ezyTicket from "@/public/images/EzyTicket.webp";
 
 const projects = [
   {
@@ -109,7 +108,7 @@ function Projects() {
                     href={project.liveLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-4 py-2 border border-white/20 rounded-lg hover:bg-white/10 hover:scale-105  transition-transform duration-300"
+                    className="inline-flex items-center gap-2 px-4 py-2 border border-white/20 rounded-lg bg-white/10 hover:bg-white/20 hover:scale-105  transition-transform duration-300"
                   >
                     <FiExternalLink /> Live Demo
                   </a>
@@ -118,7 +117,7 @@ function Projects() {
                     href={project.githubClient}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-4 py-2 border border-white/20 rounded-lg  hover:bg-white/10 hover:scale-105  transition-transform duration-300"
+                    className="inline-flex items-center gap-2 px-4 py-2 border border-white/20 rounded-lg bg-white/10  hover:bg-white/20 hover:scale-105  transition-transform duration-300"
                   >
                     <FiGithub /> Client
                   </a>
@@ -128,7 +127,7 @@ function Projects() {
                       href={project.githubServer}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-white/20 hover:bg-white/10 hover:scale-105  transition-transform duration-300"
+                      className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white/10 border border-white/20 hover:bg-white/20 hover:scale-105  transition-transform duration-300"
                     >
                       <FiGithub /> Server
                     </a>

@@ -120,9 +120,9 @@ const Skills = () => {
                         color="white"
                         speed="5s"
                       >
-                        <div className="rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-200 p-2 flex items-center gap-4">
+                        <div className="rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-200 p-1.5 md:p-2 flex items-center gap-3 md:gap-4">
                           <div
-                            className={`${skill.color} w-14 h-14 rounded-xl flex items-center justify-center text-white/90 flex-shrink-0`}
+                            className={`${skill.color} w-12 md:w-14 h-12 md:h-14 rounded-xl flex items-center justify-center text-white/90 shrink-0`}
                           >
                             <SkillIcon className="w-8 h-8" />
                           </div>
