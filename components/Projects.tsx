@@ -20,6 +20,30 @@ const projects = [
   {
     id: 2,
     image:
+      "https://res.cloudinary.com/dp6urj3gj/image/upload/v1766476698/workboard-ss_wfjxlh.png",
+    name: "Work Board",
+    type: "Task Management Website",
+    description:
+      "WORK BOARD is a task management platform. The platform supports user and assigned task management using modern frontend and backend technologies.",
+    liveLink: "https://workboard-client.vercel.app/",
+    githubClient: "https://github.com/mazharul90007/work-board-client",
+    githubServer: "https://github.com/mazharul90007/workboard-server",
+    tags: [
+      "Next.js 16",
+      "React 19",
+      "TypeScript",
+      "TanStack Query",
+      "Node.js",
+      "Express.js",
+      "PostgreSQL",
+      "Prisma",
+      "Zod",
+      "Vercel",
+    ],
+  },
+  {
+    id: 3,
+    image:
       "https://res.cloudinary.com/dp6urj3gj/image/upload/v1765627636/bd-destinationERD_pftztz.png",
     name: "BD-DESTINATION",
     type: "BD Travel information website (server)",
