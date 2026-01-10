@@ -9,9 +9,9 @@ import { FiMenu, FiX } from "react-icons/fi";
 
 const navLinks = [
   { name: "Home", href: "/" },
-  { name: "Projects", href: "/projects" },
+  { name: "Projects", href: "/#projects" },
   { name: "Blog", href: "/blog" },
-  { name: "Contact", href: "/contact" },
+  { name: "Contact", href: "/#contact" },
 ];
 
 const Navbar = () => {
@@ -60,7 +60,7 @@ const Navbar = () => {
           href="/resume/Resume_of_Sourabh.pdf"
           target="_blank"
           rel="noopener noreferrer"
-          className="hidden md:flex items-center gap-2 py-1.5 md:py-3 px-2 md:px-4 rounded-xl md:rounded-2xl border border-white/20 text-lg md:text-xl font-medium text-white bg-white/10"
+          className="hidden md:flex items-center gap-2 py-1.5 md:py-3 px-2 md:px-4 rounded-xl md:rounded-2xl text-lg md:text-xl font-medium text-white border border-white/20 bg-white/10  hover:bg-white/20  transition-transform duration-300"
         >
           Resume
           <RiArrowRightDoubleFill className="h-4 w-4" />
@@ -114,7 +114,7 @@ const Navbar = () => {
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => setOpen(false)}
-            className="mt-3 w-fit flex items-center justify-center gap-2 rounded-xl border border-white/20 py-1.5 px-3 text-lg font-medium text-white bg-white/10"
+            className="mt-3 w-fit flex items-center justify-center gap-2 rounded-xl  py-1.5 px-3 text-lg font-medium text-white   border border-white/20 bg-white/10  hover:bg-white/20 transition-transform duration-300"
           >
             Resume
             <RiArrowRightDoubleFill className="h-4 w-4" />

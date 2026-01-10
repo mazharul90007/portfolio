@@ -30,7 +30,7 @@ const Hero = () => {
           href="/resume/Resume_of_Sourabh.pdf"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-2 py-1.5 md:py-3 px-3 md:px-6 rounded-xl md:rounded-3xl border border-white/20 text-lg md:text-xl font-medium text-white w-fit cursor-pointer bg-white/10"
+          className="flex items-center gap-2 py-1.5 md:py-3 px-3 md:px-6 rounded-xl md:rounded-3xl border border-white/20 text-lg md:text-xl font-medium text-white w-fit cursor-pointer bg-white/10  hover:bg-white/20  transition-transform duration-300"
         >
           View Resume
           <LuDownload />
