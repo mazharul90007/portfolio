@@ -7,42 +7,36 @@ const projects = [
   {
     id: 1,
     image:
-      "https://res.cloudinary.com/dp6urj3gj/image/upload/v1766114389/EzyTicket_jg6den.webp",
-    name: "Ezy Ticket",
-    type: "Online Ticket Booking Website",
-    description:
-      "EzyTicket is an online ticket booking platform with secure payments, role-based dashboards, and full CRUD functionality.",
-    liveLink: "https://ezyticket-7198b.web.app/",
-    githubClient: "https://github.com/mazharul90007/ezyTicket-client",
-    githubServer: "https://github.com/mazharul90007/ezyTicket-server-2",
-    tags: ["React", "TypeScript", "Firebase", "Node.js", "MongoDB", "Stripe"],
-  },
-  {
-    id: 2,
-    image:
-      "https://res.cloudinary.com/dp6urj3gj/image/upload/v1766476698/workboard-ss_wfjxlh.png",
+      "https://res.cloudinary.com/dp6urj3gj/image/upload/v1769278587/workboard_j5hlmt.png",
     name: "Work Board",
     type: "Task Management Website",
     description:
       "WORK BOARD is a task management platform. The platform supports user and assigned task management using modern frontend and backend technologies.",
     liveLink: "https://workboard-client.vercel.app/",
     githubClient: "https://github.com/mazharul90007/work-board-client",
-    githubServer: "https://github.com/mazharul90007/workboard-server",
+    githubServer: "https://github.com/mazharul90007/workboard-server-nestjs",
     tags: [
       "Next.js 16",
       "React 19",
-      "TypeScript",
+      "Zustand",
       "TanStack Query",
+      "Axios",
+      "React Hook Form",
       "Node.js",
-      "Express.js",
+      "Nest.js",
       "PostgreSQL",
       "Prisma",
-      "Zod",
+      "JWT",
+      "Passport.js",
+      "Bcrypt",
+      "Cloudinary",
+      "TypeScript",
+      "Render",
       "Vercel",
     ],
   },
   {
-    id: 3,
+    id: 2,
     image:
       "https://res.cloudinary.com/dp6urj3gj/image/upload/v1765627636/bd-destinationERD_pftztz.png",
     name: "BD-DESTINATION",
@@ -62,6 +56,19 @@ const projects = [
       "Zod",
       "Cloudinary",
     ],
+  },
+  {
+    id: 3,
+    image:
+      "https://res.cloudinary.com/dp6urj3gj/image/upload/v1766114389/EzyTicket_jg6den.webp",
+    name: "Ezy Ticket",
+    type: "Online Ticket Booking Website",
+    description:
+      "EzyTicket is an online ticket booking platform with secure payments, role-based dashboards, and full CRUD functionality.",
+    liveLink: "https://ezyticket-7198b.web.app/",
+    githubClient: "https://github.com/mazharul90007/ezyTicket-client",
+    githubServer: "https://github.com/mazharul90007/ezyTicket-server-2",
+    tags: ["React", "TypeScript", "Firebase", "Node.js", "MongoDB", "Stripe"],
   },
 ];
 
