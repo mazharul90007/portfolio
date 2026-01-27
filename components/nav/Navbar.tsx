@@ -92,7 +92,7 @@ const Navbar = () => {
         {/* Mobile Menu Button */}
         <button
           onClick={() => setOpen(!open)}
-          className="md:hidden p-2 rounded-xl bg-white/5 border border-white/10 text-white z-[60] hover:bg-white/10 transition-colors"
+          className="md:hidden p-2 rounded-xl bg-white/5 border border-white/10 text-white z-60 hover:bg-white/10 transition-colors"
           aria-label="Toggle Menu"
         >
           {open ? <FiX size={24} /> : <FiMenu size={24} />}
@@ -108,7 +108,7 @@ const Navbar = () => {
       />
 
       <div
-        className={`fixed top-0 right-0 h-full w-[280px] bg-[#0a0a0a] border-l border-white/10 shadow-2xl transition-transform duration-500 cubic-bezier(0.4, 0, 0.2, 1) md:hidden ${
+        className={`fixed top-0 right-0 h-full w-70 bg-[#0a0a0a] border-l border-white/10 shadow-2xl transition-transform duration-500 cubic-bezier(0.4, 0, 0.2, 1) md:hidden ${
           open ? "translate-x-0" : "translate-x-full"
         }`}
       >

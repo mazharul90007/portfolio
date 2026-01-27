@@ -27,14 +27,14 @@ const Experience = () => {
         </h2>
 
         {/* Experience Timeline Item */}
-        <div className="relative pl-8 md:pl-12 border-l border-white/10 ml-4">
+        <div className="relative md:pl-12 md:border-l border-white/10 md:ml-4">
           {/* Timeline Dot/Icon */}
-          <div className="absolute -left-6 top-0 w-12 h-12 rounded-full bg-[#0a0a0a] border border-white/10 flex items-center justify-center text-indigo-400 shadow-[0_0_20px_rgba(99,102,241,0.2)]">
+          <div className="hidden md:absolute -left-6 top-0 w-12 h-12 rounded-full bg-[#0a0a0a] border border-white/10 md:flex items-center justify-center text-indigo-400 shadow-[0_0_20px_rgba(99,102,241,0.2)]">
             <LuBriefcase size={20} />
           </div>
 
           {/* Main Experience Card */}
-          <div className="group relative p-8 md:p-10 rounded-[2.5rem] bg-white/2 border border-white/10 hover:border-indigo-500/30 hover:bg-indigo-500/[0.01] transition-all duration-500">
+          <div className="group relative p-8 md:p-10 rounded-[2.5rem] bg-white/2 border border-white/10 hover:border-indigo-500/30 hover:bg-indigo-500/1 transition-all duration-500">
             {/* Header Info */}
             <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-6 mb-10">
               <div>
