@@ -12,7 +12,7 @@ const Hero = () => {
       <div className="absolute -top-20 -left-10 w-72 h-72 bg-blue-600/10 blur-[120px] rounded-full" />
       <div className="absolute bottom-0 right-0 w-72 h-72 bg-purple-600/10 blur-[120px] rounded-full" />
 
-      <div className="flex-1 z-10 text-center md:text-left">
+      <div className="flex-1 z-10 text-center md:text-left space-y-8">
         {/* Availability Badge */}
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs md:text-sm font-medium mb-6">
           <span className="relative flex h-2 w-2">
@@ -55,7 +55,7 @@ const Hero = () => {
                 key={i}
                 href={social.href}
                 target="_blank"
-                className="p-3 text-white/60 hover:text-indigo-400 hover:bg-white/10 rounded-full transition-all"
+                className="px-4 py-2.5 text-white/60 hover:text-indigo-400 hover:bg-white/10 rounded-full transition-all"
               >
                 <social.icon size={20} />
               </Link>
