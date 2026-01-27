@@ -1,5 +1,5 @@
-import StarBorder from "./StarBorder";
-import { FaReact, FaNodeJs, FaGithub, FaFigma } from "react-icons/fa";
+"use client";
+import { FaReact, FaNodeJs, FaGithub, FaFigma, FaDocker } from "react-icons/fa";
 import {
   SiRedux,
   SiTypescript,
@@ -23,6 +23,7 @@ import {
   SiJsonwebtokens,
   SiMongoose,
   SiHyperskill,
+  SiNestjs,
 } from "react-icons/si";
 import { BiLogoVisualStudio, BiCheck } from "react-icons/bi";
 import {
@@ -30,137 +31,214 @@ import {
   AiOutlineDatabase,
   AiOutlineTool,
 } from "react-icons/ai";
+import { RiBearSmileFill } from "react-icons/ri";
 import { MdDesignServices } from "react-icons/md";
+import { IconType } from "react-icons/lib";
 
-const skills = {
-  Frontend: [
-    { name: "Next.js", icon: SiNextdotjs, color: "bg-gray-500" },
-    { name: "React", icon: FaReact, color: "bg-blue-500" },
-    { name: "Redux", icon: SiRedux, color: "bg-purple-600" },
-    { name: "TypeScript", icon: SiTypescript, color: "bg-blue-600" },
-    { name: "JavaScript", icon: SiJavascript, color: "bg-yellow-500" },
-    { name: "Firebase", icon: SiFirebase, color: "bg-orange-500" },
-    { name: "Shadcn UI", icon: SiShadcnui, color: "bg-slate-700" },
-    { name: "DaisyUI", icon: SiDaisyui, color: "bg-teal-500" },
-    { name: "Tailwind CSS", icon: SiTailwindcss, color: "bg-blue-400" },
-    { name: "Bootstrap", icon: SiBootstrap, color: "bg-purple-600" },
-    { name: "HTML5", icon: SiHtml5, color: "bg-orange-600" },
-    { name: "CSS3", icon: SiCss3, color: "bg-blue-600" },
-  ],
-  Backend: [
-    { name: "Node.js", icon: FaNodeJs, color: "bg-green-600" },
-    { name: "Postgresql", icon: SiPostgresql, color: "bg-blue-600" },
-    { name: "Prisma", icon: SiPrisma, color: "bg-gray-600" },
-    { name: "Express.js", icon: SiExpress, color: "bg-slate-600" },
-    { name: "MongoDB", icon: SiMongodb, color: "bg-green-700" },
-    { name: "Mongoose", icon: SiMongoose, color: "bg-red-800" },
-    { name: "JWT", icon: SiJsonwebtokens, color: "bg-blue-900" },
-    { name: "Zod", icon: SiZod, color: "bg-sky-600" },
-  ],
-  "Dev Tools": [
-    { name: "GitHub", icon: FaGithub, color: "bg-slate-900" },
-    { name: "VSCode", icon: BiLogoVisualStudio, color: "bg-blue-600" },
-    { name: "Postman", icon: SiPostman, color: "bg-orange-600" },
-    { name: "MongoDB Compass", icon: SiMongodb, color: "bg-green-600" },
-  ],
-  "Design Tools": [
-    { name: "Figma", icon: FaFigma, color: "bg-purple-500" },
-    { name: "Photoshop", icon: SiAdobephotoshop, color: "bg-blue-700" },
-    { name: "Illustrator", icon: SiAdobeillustrator, color: "bg-orange-700" },
-  ],
-};
+const frontendTech = [
+  { name: "Next.js", icon: SiNextdotjs, color: "#ffffff" },
+  { name: "React", icon: FaReact, color: "#61DAFB" },
+  { name: "Zustand", icon: RiBearSmileFill, color: "#443E38" },
+  { name: "Redux", icon: SiRedux, color: "#764ABC" },
+  { name: "TypeScript", icon: SiTypescript, color: "#3178C6" },
+  { name: "JavaScript", icon: SiJavascript, color: "#F7DF1E" },
+  { name: "Firebase", icon: SiFirebase, color: "#FFCA28" },
+  { name: "Tailwind", icon: SiTailwindcss, color: "#06B6D4" },
+  { name: "Bootstrap", icon: SiBootstrap, color: "#7952B3" },
+  { name: "DaisyUI", icon: SiDaisyui, color: "#1AD1A5" },
+  { name: "Shadcn", icon: SiShadcnui, color: "#ffffff" },
+  { name: "HTML5", icon: SiHtml5, color: "#E34F26" },
+  { name: "CSS3", icon: SiCss3, color: "#1572B6" },
+];
 
-const categoryIcons = {
-  Frontend: AiOutlineCode,
-  Backend: AiOutlineDatabase,
-  "Dev Tools": AiOutlineTool,
-  "Design Tools": MdDesignServices,
-};
+const backendTech = [
+  { name: "Node.js", icon: FaNodeJs, color: "#339933" },
+  { name: "Nest.js", icon: SiNestjs, color: "#E0234E" },
+  { name: "PostgreSQL", icon: SiPostgresql, color: "#4169E1" },
+  { name: "Prisma", icon: SiPrisma, color: "#ffffff" },
+  { name: "Mongoose", icon: SiMongoose, color: "#880000" },
+  { name: "Express", icon: SiExpress, color: "#ffffff" },
+  { name: "MongoDB", icon: SiMongodb, color: "#47A248" },
+  { name: "JWT", icon: SiJsonwebtokens, color: "#ffffff" },
+  { name: "Zod", icon: SiZod, color: "#3E67B1" },
+];
 
-const softSkills = [
-  "Communication Skills",
-  "Problem Solving",
-  "Teamwork & Collaboration",
-  "Adaptability",
-  "Attention to Detail",
-  "Time Management",
-  "Critical Thinking",
-  "Creativity",
+const designTech = [
+  { name: "Figma", icon: FaFigma, color: "#F24E1E" },
+  {
+    name: "Photoshop",
+    icon: SiAdobephotoshop,
+    color: "#31A8FF",
+  },
+  {
+    name: "Illustrator",
+    icon: SiAdobeillustrator,
+    color: "#FF9A00",
+  },
+];
+
+const toolTech = [
+  { name: "Docker", icon: FaDocker, color: "#2496ED" },
+  { name: "GitHub", icon: FaGithub, color: "#ffffff" },
+  {
+    name: "VSCode",
+    icon: BiLogoVisualStudio,
+    color: "#007ACC",
+  },
+  { name: "Postman", icon: SiPostman, color: "#FF6C37" },
 ];
 
 const Skills = () => {
+  const SkillIcon = ({
+    icon: Icon,
+    name,
+    color,
+  }: {
+    icon: IconType;
+    name: string;
+    color: string;
+  }) => (
+    <div className="flex flex-col gap-1 items-center">
+      <div className="flex relative w-14 h-14 md:w-24 md:h-24 rounded-2xl bg-white/5 border border-white/10 items-center justify-center transition-all duration-300 group-hover/item:bg-white/15 group-hover/item:-translate-y-2 group-hover/item:border-white/30">
+        <Icon
+          size={36}
+          style={{ color }}
+          className="drop-shadow-[0_0_8px_rgba(255,255,255,0.2)]"
+        />
+        {/* Intense Hover Glow */}
+        <div
+          className="absolute inset-0 blur-2xl opacity-0 group-hover/item:opacity-40 transition-opacity rounded-full"
+          style={{ backgroundColor: color }}
+        />
+      </div>
+      <span className="text-[10px] md:text-xs text-white/40 font-bold uppercase tracking-widest group-hover/item:text-white transition-colors">
+        {name}
+      </span>
+    </div>
+  );
+
   return (
-    <section className="py-16 w-full">
+    <section className="relative py-24 w-full overflow-hidden">
+      {/* Intense Background Glows */}
+      <div className="absolute top-0 right-0 w-125 h-125 bg-indigo-600/10 blur-[150px] rounded-full -z-10" />
+      <div className="absolute bottom-0 left-0 w-125 h-125 bg-blue-600/10 blur-[150px] rounded-full -z-10" />
+
       <div className="max-w-7xl mx-auto">
-        <p className="text-white/50 font-medium text-xl md:text-2xl mb-4">
-          <span className="mr-2">||</span>Tech Skills
-        </p>
-        <h2 className="text-5xl text-sub font-semibold mb-16">
-          My Core tools for development
+        <div className="flex items-center gap-3 text-indigo-500 font-bold tracking-[0.2em] uppercase text-xs mb-6">
+          <span className="w-10 h-px bg-indigo-500"></span>
+          Abilities
+        </div>
+        <h2 className="text-5xl md:text-7xl font-bold text-white mb-16 tracking-tight">
+          Technical <br />
+          <span className="bg-linear-to-r from-blue-400 via-indigo-400 to-purple-500 bg-clip-text text-transparent">
+            Toolbox
+          </span>
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-          {Object.entries(skills).map(([category, skillList]) => {
-            const Icon = categoryIcons[category as keyof typeof categoryIcons];
-            return (
-              <div key={category}>
-                <h3 className="text-2xl md:text-3xl font-bold text-white/90 mb-4 flex items-center gap-3">
-                  <Icon className="w-7 h-7" />
-                  {category}
-                </h3>
-                <div className="grid grid-cols-2 xl:grid-cols-3 gap-2">
-                  {skillList.map((skill) => {
-                    const SkillIcon = skill.icon;
+        {/* ===============Card Sections============== */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
+          {/* 1. Frontend - Featured Wide Card */}
+          <div className="lg:col-span-3 relative group p-10 rounded-[3rem] border border-white/10 overflow-hidden bg-[#0a0a0a]">
+            {/* Eye-Catching Background Glow */}
+            <div className="absolute -top-24 -left-24 w-80 h-80 bg-blue-600/20 blur-[100px] rounded-full group-hover:bg-blue-600/30 transition-colors duration-700" />
 
-                    return (
-                      <StarBorder
-                        key={skill.name}
-                        as="button"
-                        className="custom-class"
-                        color="white"
-                        speed="5s"
-                      >
-                        <div className="rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-200 p-1.5 md:p-2 flex items-center gap-3 md:gap-4">
-                          <div
-                            className={`${skill.color} w-12 md:w-14 h-12 md:h-14 rounded-xl flex items-center justify-center text-white/90 shrink-0`}
-                          >
-                            <SkillIcon className="w-8 h-8" />
-                          </div>
-                          <span className="text-white/50 font-semibold text-lg">
-                            {skill.name}
-                          </span>
-                        </div>
-                      </StarBorder>
-                    );
-                  })}
-                </div>
+            <div className="relative z-10">
+              <div className="flex items-center gap-4 mb-12">
+                <AiOutlineCode className="text-blue-400" size={32} />
+                <h3 className="text-xl font-bold text-white tracking-widest uppercase italic">
+                  Frontend Mastery
+                </h3>
               </div>
-            );
-          })}
+              <div className="flex flex-wrap gap-2">
+                {frontendTech.map((s) => (
+                  <SkillIcon key={s.name} {...s} />
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* 2. Backend - Standard Card */}
+          <div className="lg:col-span-2 relative group p-10 rounded-[3rem] border border-white/10 overflow-hidden bg-[#0a0a0a]">
+            <div className="absolute -bottom-24 -right-24 w-80 h-80 bg-purple-600/20 blur-[100px] rounded-full group-hover:bg-purple-600/30 transition-colors duration-700" />
+
+            <div className="relative z-10">
+              <div className="flex items-center gap-4 mb-12">
+                <AiOutlineDatabase className="text-purple-400" size={32} />
+                <h3 className="text-xl font-bold text-white tracking-widest uppercase italic">
+                  Backend
+                </h3>
+              </div>
+              <div className="flex flex-wrap gap-3">
+                {backendTech.map((s) => (
+                  <SkillIcon key={s.name} {...s} />
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* 3. Design Tools - Standard Card */}
+          <div className="lg:col-span-2 relative group p-10 rounded-[3rem] border border-white/10 overflow-hidden bg-[#0a0a0a]">
+            <div className="absolute -top-24 -right-24 w-64 h-64 bg-pink-600/20 blur-[80px] rounded-full" />
+
+            <div className="relative z-10">
+              <div className="flex items-center gap-4 mb-12">
+                <MdDesignServices className="text-pink-400" size={32} />
+                <h3 className="text-xl font-bold text-white tracking-widest uppercase italic">
+                  Design
+                </h3>
+              </div>
+              <div className="flex flex-wrap gap-3">
+                {designTech.map((s) => (
+                  <SkillIcon key={s.name} {...s} />
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* 4. Dev Tools - Featured Wide Card */}
+          <div className="lg:col-span-3 relative group p-10 rounded-[3rem] border border-white/10 overflow-hidden bg-[#0a0a0a]">
+            <div className="absolute inset-0 bg-linear-to-r from-indigo-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+
+            <div className="relative z-10">
+              <div className="flex items-center gap-4 mb-12">
+                <AiOutlineTool className="text-indigo-400" size={32} />
+                <h3 className="text-xl font-bold text-white tracking-widest uppercase italic">
+                  Workflow Tools
+                </h3>
+              </div>
+              <div className="flex flex-wrap gap-3">
+                {toolTech.map((s) => (
+                  <SkillIcon key={s.name} {...s} />
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
-        <div className="mt-12">
-          <h3 className="text-2xl md:text-3xl font-bold text-white/90 mb-4 flex items-center gap-3">
-            <span>
-              <SiHyperskill />
-            </span>
-            Soft Skills
+
+        {/* Soft Skills Section */}
+        <div className=" mt-6 group p-10 rounded-[3rem] border border-white/10 bg-white/2 backdrop-blur-3xl overflow-hidden relative">
+          <div className="absolute -right-20 -bottom-20 w-64 h-64 bg-indigo-500/10 blur-[100px] rounded-full" />
+          <h3 className="text-white font-bold uppercase tracking-[0.3em] text-xs mb-8 flex items-center gap-3">
+            <SiHyperskill className="text-indigo-500 animate-pulse" /> Core
+            Strengths
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-            {softSkills.map((skill) => {
-              return (
-                <div
-                  key={skill}
-                  className=" border border-white/20 rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-200 p-4 flex items-center gap-4"
-                >
-                  <span>
-                    <BiCheck />
-                  </span>
-                  <span className="text-white/50 font-semibold text-lg">
-                    {skill}
-                  </span>
-                </div>
-              );
-            })}
+          <div className="flex flex-wrap gap-4">
+            {[
+              "Problem Solving",
+              "Adaptability",
+              "Collaboration",
+              "Time Management",
+              "Critical Thinking",
+              "Creativity",
+              "Attention to Detail",
+            ].map((s) => (
+              <div
+                key={s}
+                className="px-6 py-3 rounded-2xl bg-white/5 border border-white/10 text-white/50 text-xs font-bold uppercase tracking-widest hover:border-indigo-500/50 hover:text-indigo-400 hover:bg-indigo-500/5 transition-all cursor-default flex items-center gap-2"
+              >
+                <BiCheck size={18} className="text-indigo-500" /> {s}
+              </div>
+            ))}
           </div>
         </div>
       </div>
