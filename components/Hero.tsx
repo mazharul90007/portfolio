@@ -38,7 +38,7 @@ const Hero = () => {
           <Link
             href="/resume/Resume_of_Sourabh.pdf"
             target="blank"
-            className="group flex items-center gap-2 py-3 px-8 rounded-full bg-indigo-600 text-white font-bold hover:bg-indigo-500 transition-all duration-300 shadow-lg shadow-indigo-500/20"
+            className="group flex items-center gap-2 py-2.5 md:py-3 px-4 md:px-8 rounded-full bg-indigo-600 text-white font-bold hover:bg-indigo-500 transition-all duration-300 shadow-lg shadow-indigo-500/20"
           >
             View Resume
             <LuDownload className="group-hover:translate-y-1 transition-transform" />
@@ -55,7 +55,7 @@ const Hero = () => {
                 key={i}
                 href={social.href}
                 target="_blank"
-                className="px-4 py-2.5 text-white/60 hover:text-indigo-400 hover:bg-white/10 rounded-full transition-all"
+                className="px-2 md:px-4 py-1.5 md:py-2.5 text-white/60 hover:text-indigo-400 hover:bg-white/10 rounded-full transition-all"
               >
                 <social.icon size={20} />
               </Link>

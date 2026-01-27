@@ -128,7 +128,7 @@ const Skills = () => {
           <span className="w-10 h-px bg-indigo-500"></span>
           Abilities
         </div>
-        <h2 className="text-5xl md:text-7xl font-bold text-white mb-16 tracking-tight">
+        <h2 className="text-5xl md:text-7xl font-bold text-white mb-8 md:mb-12 tracking-tight">
           Technical <br />
           <span className="bg-linear-to-r from-blue-400 via-indigo-400 to-purple-500 bg-clip-text text-transparent">
             Toolbox
