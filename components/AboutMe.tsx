@@ -25,7 +25,7 @@ const AboutMe = () => {
         {/* Left Side: Story & Narrative */}
         <div className="lg:col-span-7">
           <div className="flex items-center gap-3 text-indigo-500 font-bold tracking-[0.2em] uppercase text-xs mb-6">
-            <span className="w-10 h-[1px] bg-indigo-500"></span>
+            <span className="w-10 h-px bg-indigo-500"></span>
             About Me
           </div>
 

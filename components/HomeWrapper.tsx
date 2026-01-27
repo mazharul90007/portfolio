@@ -24,7 +24,7 @@ export default function HomeWrapper({
       </div>
 
       {/* Page content */}
-      <div className="relative h-full flex flex-col justify-center items-start max-w-7xl mx-auto px-2 xl:px-0">
+      <div className="relative h-full flex flex-col justify-center items-start max-w-7xl mx-auto px-2 lg:px-4 xl:px-8">
         {children}
       </div>
     </div>
