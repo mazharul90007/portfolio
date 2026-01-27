@@ -101,7 +101,7 @@ const Navbar = () => {
 
       {/* --- MOBILE NAVIGATION --- */}
       <div
-        className={`fixed inset-0 bg-black/40 backdrop-blur-md transition-opacity duration-300 md:hidden ${
+        className={`fixed inset-0 bg-black/50 w-screen h-screen  transition-opacity duration-300 md:hidden ${
           open ? "opacity-100 visible" : "opacity-0 invisible"
         }`}
         onClick={() => setOpen(false)}
@@ -112,7 +112,7 @@ const Navbar = () => {
           open ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        <div className="flex flex-col gap-8 px-8 py-32">
+        <div className="flex flex-col gap-8 px-8 py-32 bg-black/80 h-screen border-l border-white/10">
           {navLinks.map((link, idx) => (
             <Link
               key={link.href}
