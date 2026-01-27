@@ -23,7 +23,7 @@ export default function NotFound() {
       {/* Button */}
       <Link
         href="/"
-        className="px-6 py-3 bg-linear-to-r from-red-500  to-cyan-400 hover:scale-105 transition-transform rounded-lg font-semibold text-white shadow-lg"
+        className="px-6 py-3 bg-linear-to-r bg-indigo-600 text-white font-bold hover:bg-indigo-500 hover:scale-105 transition-transform rounded-lg shadow-lg"
       >
         Go Back Home
       </Link>
