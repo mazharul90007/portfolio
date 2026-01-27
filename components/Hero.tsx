@@ -45,7 +45,7 @@ const Hero = () => {
           </Link>
 
           {/* Social Dock */}
-          <div className="flex items-center gap-2 p-1.5 rounded-full bg-white/5 border border-white/10 backdrop-blur-md">
+          <div className="flex items-center gap-2 p-1.5 rounded-full bg-white/5 border border-purple-500/50 backdrop-blur-md">
             {[
               { href: "https://github.com/mazharul90007", icon: FaGithub },
               { href: "https://linkedin.com/in/misourabh", icon: FaLinkedin },
