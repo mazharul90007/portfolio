@@ -60,12 +60,34 @@
 }
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: auto !important;
+  max-width: 100%;
+  overflow-x: hidden;
+  position: relative;
 }
-
 body {
   font-family: var(--font-roboto), serif;
+  max-width: 100vw;
+  position: relative;
 }
+
+section[id] {
+  scroll-margin-top: 40px; /* To keep every section height fixed */
+}
+
+/* Optional: Smooth out Lenis scrolling on some browsers */
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
 .text-sub {
   font-family: var(--font-playfairDisplay), serif;
 }
@@ -73,6 +95,20 @@ body {
 @layer components {
   .navItems {
     @apply text-2xl font-medium text-white/50;
+  }
+
+  .jellyfish-card {
+    @apply relative overflow-hidden rounded-[2.5rem] bg-white/3 border border-white/10 transition-all duration-700 ease-out;
+
+    box-shadow: inset 0 0 30px rgba(99, 102, 241, 0.4);
+  }
+
+  .jellyfish-card:hover {
+    @apply border-indigo-500/40;
+
+    box-shadow:
+      inset 0 0 50px rgba(99, 102, 241, 0.4),
+      0 10px 30px -10px rgba(99, 102, 241, 0.2);
   }
 }
 

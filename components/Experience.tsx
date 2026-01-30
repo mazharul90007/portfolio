@@ -8,7 +8,7 @@ import {
 
 const Experience = () => {
   return (
-    <section className="relative py-16 w-full overflow-hidden">
+    <section id="experience" className="relative py-16 w-full overflow-hidden">
       {/* Background Glow to match Hero/About */}
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-purple-600/5 blur-[140px] rounded-full -z-10" />
 
@@ -34,7 +34,7 @@ const Experience = () => {
           </div>
 
           {/* Main Experience Card */}
-          <div className="group relative p-8 md:p-10 rounded-[2.5rem] bg-white/2 border border-white/10 hover:border-indigo-500/30 hover:bg-indigo-500/1 transition-all duration-500">
+          <div className="group relative p-8 md:p-10 rounded-[2.5rem] bg-white/2 border border-white/10 hover:border-indigo-500/30 hover:bg-indigo-500/1 transition-all duration-500 jellyfish-card">
             {/* Header Info */}
             <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-6 mb-10">
               <div>

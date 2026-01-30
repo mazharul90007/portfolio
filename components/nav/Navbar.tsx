@@ -1,7 +1,6 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { RiArrowRightDoubleFill } from "react-icons/ri";
 import brand from "@/public/images/brand.png";
 import { useState, useEffect } from "react";
@@ -9,32 +8,75 @@ import { FiMenu, FiX } from "react-icons/fi";
 
 const navLinks = [
   { name: "Home", href: "/" },
+  { name: "About", href: "/#about" },
+  { name: "Experience", href: "/#experience" },
+  { name: "Education", href: "/#education" },
+  { name: "Skills", href: "/#skills" },
   { name: "Projects", href: "/#projects" },
-  { name: "Blog", href: "/blog" },
   { name: "Contact", href: "/#contact" },
 ];
 
 const Navbar = () => {
-  const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState("home");
 
-  // Handle scroll effect for sticky header
+  // 1. Handle Scroll Effect & Intersection Observer
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
+      // Fallback: If at the very top, set active to home
+      if (window.scrollY < 100) setActiveSection("home");
     };
+
+    const observerOptions = {
+      root: null,
+      rootMargin: "-30% 0px -60% 0px", // Triggers when section is in upper-mid screen
+      threshold: 0,
+    };
+
+    const observerCallback = (entries: IntersectionObserverEntry[]) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveSection(entry.target.id);
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(
+      observerCallback,
+      observerOptions,
+    );
+    const sections = document.querySelectorAll("section[id]");
+    sections.forEach((section) => observer.observe(section));
+
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
-  // Prevent scrolling when the mobile menu is open
-  useEffect(() => {
-    if (open) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "unset";
+  // 2. Smooth Scroll Handler
+  const handleSmoothScroll = (e: React.MouseEvent, href: string) => {
+    if (href === "/") {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      setOpen(false);
+    } else if (href.startsWith("/#")) {
+      e.preventDefault();
+      const targetId = href.replace("/#", "");
+      const element = document.getElementById(targetId);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+      setOpen(false);
     }
+  };
+
+  // Prevent body scroll when mobile menu is open
+  useEffect(() => {
+    document.body.style.overflow = open ? "hidden" : "unset";
   }, [open]);
 
   return (
@@ -45,9 +87,13 @@ const Navbar = () => {
           : "py-6 bg-transparent"
       }`}
     >
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6">
+      <div className="mx-auto max-w-7xl flex  items-center justify-between px-6 overflow-x-hidden">
         {/* Logo Section */}
-        <Link href="/" className="group flex items-center gap-3">
+        <Link
+          href="/"
+          onClick={(e) => handleSmoothScroll(e, "/")}
+          className="group flex items-center gap-3"
+        >
           <div className="relative flex h-10 w-10 items-center justify-center rounded-xl bg-white overflow-hidden group-hover:scale-110 transition-transform duration-300 shadow-[0_0_20px_rgba(255,255,255,0.2)]">
             <Image
               src={brand}
@@ -62,19 +108,26 @@ const Navbar = () => {
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden items-center gap-8 md:flex">
+        <div className="hidden items-center gap-6 md:flex">
           <div className="flex items-center gap-6 px-6 py-3 rounded-full bg-white/5 border border-white/10 backdrop-blur-md">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className={`text-xs font-bold uppercase tracking-widest transition-all hover:text-white ${
-                  pathname === link.href ? "text-white" : "text-white/40"
-                }`}
-              >
-                {link.name}
-              </Link>
-            ))}
+            {navLinks.map((link) => {
+              const sectionId =
+                link.href === "/" ? "home" : link.href.replace("/#", "");
+              const isActive = activeSection === sectionId;
+
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  onClick={(e) => handleSmoothScroll(e, link.href)}
+                  className={`text-xs font-bold uppercase tracking-widest transition-all hover:text-white ${
+                    isActive ? "text-indigo-400 scale-105" : "text-white/40"
+                  }`}
+                >
+                  {link.name}
+                </Link>
+              );
+            })}
           </div>
 
           {/* Desktop CTA */}
@@ -82,18 +135,20 @@ const Navbar = () => {
             href="/resume/Resume_of_Sourabh.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 py-2.5 px-5 rounded-xl text-xs font-bold uppercase tracking-widest text-black bg-white hover:bg-indigo-500 hover:text-white transition-all duration-300 shadow-lg shadow-white/5 hover:shadow-indigo-500/20"
+            className="group/btn flex items-center gap-2 py-3 px-5 rounded-xl text-xs font-bold uppercase tracking-widest text-black bg-white hover:bg-indigo-500 hover:text-white transition-all duration-300 shadow-lg shadow-white/5 hover:shadow-indigo-500/20"
           >
             Resume
-            <RiArrowRightDoubleFill size={16} />
+            <RiArrowRightDoubleFill
+              size={16}
+              className="transform group-hover/btn:translate-x-1 transition-transform duration-300"
+            />
           </Link>
         </div>
 
         {/* Mobile Menu Button */}
         <button
           onClick={() => setOpen(!open)}
-          className="md:hidden p-2 rounded-xl bg-white/5 border border-white/10 text-white z-60 hover:bg-white/10 transition-colors"
-          aria-label="Toggle Menu"
+          className="md:hidden flex items-center p-2 rounded-xl bg-white/5 border border-white/10 text-white z-60"
         >
           {open ? <FiX size={24} /> : <FiMenu size={24} />}
         </button>
@@ -101,46 +156,38 @@ const Navbar = () => {
 
       {/* --- MOBILE NAVIGATION --- */}
       <div
-        className={`fixed inset-0 bg-black/50 w-screen h-screen  transition-opacity duration-300 md:hidden ${
+        className={`fixed inset-0 bg-black/50 w-full h-screen transition-opacity duration-300 md:hidden ${
           open ? "opacity-100 visible" : "opacity-0 invisible"
         }`}
         onClick={() => setOpen(false)}
       />
 
       <div
-        className={`fixed top-0 right-0 h-full w-70 bg-[#0a0a0a] border-l border-white/10 shadow-2xl transition-transform duration-500 cubic-bezier(0.4, 0, 0.2, 1) md:hidden ${
+        className={`fixed top-0 right-0 h-full w-60 bg-[#0a0a0a] border-l border-white/10 shadow-2xl transition-transform duration-500 ${
           open ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        <div className="flex flex-col gap-8 px-8 py-32 bg-black/80 h-screen border-l border-white/10">
-          {navLinks.map((link, idx) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              onClick={() => setOpen(false)}
-              style={{ transitionDelay: `${idx * 50}ms` }}
-              className={`text-sm font-bold uppercase tracking-[0.3em] transition-all ${
-                pathname === link.href
-                  ? "text-indigo-500 translate-x-2"
-                  : "text-white/40 hover:text-white"
-              }`}
-            >
-              {link.name}
-            </Link>
-          ))}
+        <div className="flex flex-col gap-8 px-8 py-32 h-screen bg-black/60">
+          {navLinks.map((link) => {
+            const sectionId =
+              link.href === "/" ? "home" : link.href.replace("/#", "");
+            const isActive = activeSection === sectionId;
 
-          <div className="h-px w-full bg-white/10 mt-4" />
-
-          <Link
-            href="/resume/Resume_of_Sourabh.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={() => setOpen(false)}
-            className="flex items-center justify-center gap-2 rounded-xl py-4 text-xs font-bold uppercase tracking-widest text-black bg-white hover:bg-indigo-500 hover:text-white transition-all duration-300"
-          >
-            Resume
-            <RiArrowRightDoubleFill size={16} />
-          </Link>
+            return (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={(e) => handleSmoothScroll(e, link.href)}
+                className={`text-sm font-bold uppercase tracking-[0.3em] transition-all ${
+                  isActive
+                    ? "text-indigo-500 translate-x-2"
+                    : "text-white/40 hover:text-white"
+                }`}
+              >
+                {link.name}
+              </Link>
+            );
+          })}
         </div>
       </div>
     </nav>

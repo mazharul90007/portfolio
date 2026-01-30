@@ -11,7 +11,7 @@ const certData = [
     color: "#6366f1",
     // Featured Background: Wide gradient
     bgClass:
-      "bg-linear-to-r from-indigo-500/[0.12] via-purple-500/[0.05] to-transparent",
+      "bg-linear-to-br from-indigo-500/12 via-transparent to-purple-500/6",
     isFeatured: true,
   },
   {
@@ -20,8 +20,7 @@ const certData = [
     duration: "June 2024 — Jan 2025",
     address: "Online",
     color: "#6366f1",
-    bgClass:
-      "bg-linear-to-b from-indigo-500/[0.07] via-transparent to-transparent",
+    bgClass: "bg-linear-to-br from-purple-500/5 via-transparent to-blue-500/7",
     isFeatured: false,
   },
   {
@@ -41,7 +40,7 @@ const certData = [
     address: "Mohakhali, Dhaka",
     color: "#3b82f6",
     bgClass:
-      "bg-[radial-gradient(ellipse_at_bottom_left,rgba(59,130,246,0.12),transparent_70%)]",
+      "bg-[radial-gradient(ellipse_at_bottom_right,rgba(59,130,246,0.12),transparent_70%)]",
     isFeatured: true,
   },
 ];
@@ -71,7 +70,7 @@ const Certifications = () => {
           {certData.map((cert, idx) => (
             <div
               key={idx}
-              className={`relative group p-8 rounded-[2.5rem] border border-white/10 hover:border-indigo-500/40 transition-all duration-500 overflow-hidden flex flex-col justify-between backdrop-blur-3xl 
+              className={`relative group p-8 rounded-[2.5rem] border border-white/10 hover:border-indigo-500/40 transition-all duration-500 overflow-hidden flex flex-col justify-between jellyfish-card 
                 ${cert.isFeatured ? "lg:col-span-2" : "col-span-1"} 
                 ${cert.bgClass}`}
             >
@@ -113,7 +112,7 @@ const Certifications = () => {
 
                 <div className="space-y-3 mb-8">
                   <p
-                    className="font-semibold text-sm transition-colors"
+                    className="font-semibold text-md transition-colors"
                     style={{ color: cert.color }}
                   >
                     {cert.institution}

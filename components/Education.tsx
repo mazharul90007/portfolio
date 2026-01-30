@@ -32,7 +32,7 @@ const educationData = [
 
 const Education = () => {
   return (
-    <section className="relative py-16 w-full overflow-hidden">
+    <section id="education" className="relative py-16 w-full overflow-hidden">
       {/* Background Glow to match Hero */}
       <div className="absolute top-1/2 left-0 w-72 h-72 bg-blue-600/5 blur-[120px] rounded-full -z-10" />
 
@@ -54,7 +54,7 @@ const Education = () => {
           {educationData.map((edu, idx) => (
             <div
               key={idx}
-              className={`relative group p-8 md:p-10 rounded-[2.5rem] bg-white/2 border border-white/10 hover:border-indigo-500/30 transition-all duration-500 overflow-hidden ${edu.bgClass}`}
+              className={`relative group p-8 md:p-10 rounded-[2.5rem] bg-white/3 border border-white/10 jellyfish-card transition-all duration-700 ease-out overflow-hidden ${edu.bgClass}`}
             >
               {/* Magic Shine Effect */}
               <ShineBorder

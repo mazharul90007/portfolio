@@ -1,12 +1,5 @@
 "use client";
-import {
-  LuUser,
-  LuMapPin,
-  LuMail,
-  LuPhone,
-  LuCalendar,
-  LuInfo,
-} from "react-icons/lu";
+import { LuMapPin, LuMail, LuPhone, LuCalendar } from "react-icons/lu";
 
 const aboutData = [
   { label: "Age", value: "28", icon: LuCalendar },
@@ -17,11 +10,11 @@ const aboutData = [
 
 const AboutMe = () => {
   return (
-    <section className="relative py-16 overflow-hidden">
+    <section id="about" className="relative py-16 overflow-hidden w-full">
       {/* Subtle background glow to match Hero */}
       <div className="absolute top-1/2 -right-20 w-72 h-72 bg-indigo-600/5 blur-[120px] rounded-full -z-10" />
 
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
         {/* Left Side: Story & Narrative */}
         <div className="lg:col-span-7">
           <div className="flex items-center gap-3 text-indigo-500 font-bold tracking-[0.2em] uppercase text-xs mb-6">
@@ -63,7 +56,7 @@ const AboutMe = () => {
           {aboutData.map((item, index) => (
             <div
               key={index}
-              className="group p-6 rounded-[2rem] bg-white/[0.03] border border-white/10 hover:border-indigo-500/50 hover:bg-indigo-500/[0.02] transition-all duration-500"
+              className="group p-6 rounded-[2rem] bg-white/3 border border-white/10 hover:border-indigo-500/50 hover:bg-indigo-500/2 transition-all duration-500 jellyfish-card"
             >
               <div className="w-10 h-10 rounded-full bg-indigo-500/10 flex items-center justify-center mb-4 text-indigo-400 group-hover:scale-110 group-hover:bg-indigo-500 group-hover:text-white transition-all">
                 <item.icon size={20} />
@@ -78,7 +71,7 @@ const AboutMe = () => {
           ))}
 
           {/* Large Address Card */}
-          <div className="sm:col-span-2 p-8 rounded-[2rem] bg-linear-to-br from-indigo-600/10 to-purple-600/10 border border-indigo-500/20 relative overflow-hidden group">
+          <div className="sm:col-span-2 p-8 rounded-[2rem] bg-linear-to-br from-indigo-600/10 to-purple-600/10 border border-indigo-500/20 relative overflow-hidden group jellyfish-card">
             <div className="relative z-10 flex items-center justify-between">
               <div>
                 <p className="text-indigo-400 text-xs uppercase tracking-widest font-bold mb-2">

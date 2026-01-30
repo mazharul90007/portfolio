@@ -64,122 +64,124 @@ const projects = [
 
 function Projects() {
   return (
-    <section id="projects" className="py-16 relative overflow-hidden">
-      {/* Section Background Glows */}
-      <div className="absolute top-0 right-0 w-125 h-125 bg-indigo-600/5 blur-[150px] rounded-full -z-10" />
-      <div className="absolute bottom-0 left-0 w-125 h-125 bg-blue-600/5 blur-[150px] rounded-full -z-10" />
-
+    <section id="projects" className="w-full py-16 relative overflow-hidden">
       <div className="max-w-7xl mx-auto">
-        {/* Header Section */}
-        <div className="flex items-center gap-3 text-indigo-500 font-bold tracking-[0.2em] uppercase text-xs mb-6">
-          <span className="w-10 h-px bg-indigo-500"></span>
-          Projects
-        </div>
-        <h2 className="text-5xl md:text-7xl font-bold text-white mb-8 md:mb-12 tracking-tight">
-          A showcase of <br />
-          <span className="bg-linear-to-r from-blue-400 via-indigo-400 to-purple-500 bg-clip-text text-transparent">
-            my work
-          </span>
-        </h2>
+        {/* Section Background Glows */}
+        <div className="absolute top-0 right-0 w-125 h-125 bg-indigo-600/5 blur-[150px] rounded-full -z-10" />
+        <div className="absolute bottom-0 left-0 w-125 h-125 bg-blue-600/5 blur-[150px] rounded-full -z-10" />
 
-        {/* Project Cards */}
-        <div className="space-y-6">
-          {projects.map((project, index) => (
-            <div
-              key={project.id}
-              className={`relative flex flex-col lg:flex-row gap-8 items-center group p-6 md:p-8 rounded-[3rem] border border-white/10 hover:border-white/20 transition-all duration-500 backdrop-blur-3xl overflow-hidden ${project.bgClass}`}
-            >
-              {/* Dynamic Animated Glow behind the card */}
-              <div
-                className="absolute -inset-24 opacity-0 group-hover:opacity-20 transition-opacity duration-700 blur-[100px] -z-10"
-                style={{ backgroundColor: project.color }}
-              />
+        <div className="max-w-7xl mx-auto">
+          {/* Header Section */}
+          <div className="flex items-center gap-3 text-indigo-500 font-bold tracking-[0.2em] uppercase text-xs mb-6">
+            <span className="w-10 h-px bg-indigo-500"></span>
+            Projects
+          </div>
+          <h2 className="text-5xl md:text-7xl font-bold text-white mb-8 md:mb-12 tracking-tight">
+            A showcase of <br />
+            <span className="bg-linear-to-r from-blue-400 via-indigo-400 to-purple-500 bg-clip-text text-transparent">
+              my work
+            </span>
+          </h2>
 
-              {/* Image Side */}
+          {/* Project Cards */}
+          <div className="space-y-6">
+            {projects.map((project, index) => (
               <div
-                className={`w-full lg:w-7/12 relative rounded-[2rem] border border-white/10 bg-black/40 p-2 overflow-hidden
-                ${index % 2 === 0 ? "lg:order-2" : "lg:order-1"}`}
+                key={project.id}
+                className={`relative flex flex-col lg:flex-row gap-8 items-center group p-6 md:p-8 rounded-[3rem] border border-white/15 hover:border-white/20 transition-all duration-500 overflow-hidden jellyfish-card ${project.bgClass}`}
               >
-                <div className="h-80 md:h-100 overflow-y-auto hide-scrollbar rounded-[1.5rem] border border-white/5 relative bg-[#0a0a0a]">
-                  <Image
-                    src={project.image}
-                    alt={project.name}
-                    width={1400}
-                    height={2000}
-                    quality={95}
-                    className="w-full h-auto transition-transform duration-700 group-hover:scale-[1.02]"
-                    priority={index === 0}
-                  />
-                </div>
-              </div>
-
-              {/* Content Side */}
-              <div
-                className={`flex flex-col lg:w-5/12 ${index % 2 === 0 ? "lg:order-1" : "lg:order-2"}`}
-              >
+                {/* Dynamic Animated Glow behind the card */}
                 <div
-                  className="flex items-center gap-2 font-mono text-[10px] mb-4 uppercase tracking-[0.2em]"
-                  style={{ color: project.color }}
+                  className="absolute -inset-24 opacity-0 group-hover:opacity-20 transition-opacity duration-700 blur-[100px] -z-10"
+                  style={{ backgroundColor: project.color }}
+                />
+
+                {/* Image Side */}
+                <div
+                  className={`w-full lg:w-7/12 relative rounded-[2rem] border border-white/10 bg-black/40 p-2 overflow-hidden
+                ${index % 2 === 0 ? "lg:order-2" : "lg:order-1"}`}
                 >
-                  <BiCodeAlt size={16} />
-                  {project.type}
+                  <div className="h-80 md:h-100 overflow-y-auto hide-scrollbar rounded-[1.5rem] border border-white/5 relative bg-[#0a0a0a]">
+                    <Image
+                      src={project.image}
+                      alt={project.name}
+                      width={1400}
+                      height={2000}
+                      quality={95}
+                      className="w-full h-auto transition-transform duration-700 group-hover:scale-[1.02]"
+                      priority={index === 0}
+                    />
+                  </div>
                 </div>
 
-                <h3 className="text-3xl md:text-4xl font-bold text-white mb-4 tracking-tight">
-                  {project.name}
-                </h3>
-
-                <p className="text-white/50 text-base md:text-lg leading-relaxed mb-8 font-medium">
-                  {project.description}
-                </p>
-
-                {/* Tech Tags */}
-                <div className="flex flex-wrap gap-2 mb-10">
-                  {project.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="px-3 py-1.5 text-[10px] font-bold uppercase tracking-widest rounded-xl bg-white/5 border border-white/10 text-white/40 hover:text-white transition-all"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-
-                {/* Action Buttons */}
-                <div className="flex flex-wrap gap-4">
-                  <a
-                    href={project.liveLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 px-6 py-3 rounded-2xl bg-white text-black font-bold text-xs uppercase tracking-widest hover:bg-indigo-500 hover:text-white transition-all duration-300 shadow-xl shadow-white/5"
+                {/* Content Side */}
+                <div
+                  className={`flex flex-col lg:w-5/12 ${index % 2 === 0 ? "lg:order-1" : "lg:order-2"}`}
+                >
+                  <div
+                    className="flex items-center gap-2 font-mono text-[10px] mb-4 uppercase tracking-[0.2em]"
+                    style={{ color: project.color }}
                   >
-                    <FiExternalLink size={16} /> Live Demo
-                  </a>
+                    <BiCodeAlt size={16} />
+                    {project.type}
+                  </div>
 
-                  <div className="flex gap-3">
-                    {project.githubClient && (
-                      <a
-                        href={project.githubClient}
-                        target="_blank"
-                        className="p-3 rounded-2xl bg-white/5 border border-white/10 text-white/60 hover:text-white hover:border-indigo-500/50 transition-all"
+                  <h3 className="text-3xl md:text-4xl font-bold text-white mb-4 tracking-tight">
+                    {project.name}
+                  </h3>
+
+                  <p className="text-white/50 text-base md:text-lg leading-relaxed mb-8 font-medium">
+                    {project.description}
+                  </p>
+
+                  {/* Tech Tags */}
+                  <div className="flex flex-wrap gap-2 mb-10">
+                    {project.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="px-3 py-1.5 text-[10px] font-bold uppercase tracking-widest rounded-xl bg-white/5 border border-white/10 text-white/40 hover:text-white transition-all"
                       >
-                        <FiGithub size={20} />
-                      </a>
-                    )}
-                    {project.githubServer && (
-                      <a
-                        href={project.githubServer}
-                        target="_blank"
-                        className="p-3 rounded-2xl bg-white/5 border border-white/10 text-white/60 hover:text-white hover:border-indigo-500/50 transition-all"
-                      >
-                        <HiOutlineCodeBracket size={20} />
-                      </a>
-                    )}
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+
+                  {/* Action Buttons */}
+                  <div className="flex flex-wrap gap-4">
+                    <a
+                      href={project.liveLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 px-6 py-3 rounded-2xl bg-white text-black font-bold text-xs uppercase tracking-widest hover:bg-indigo-500 hover:text-white transition-all duration-300 shadow-xl shadow-white/5"
+                    >
+                      <FiExternalLink size={16} /> Live Demo
+                    </a>
+
+                    <div className="flex gap-3">
+                      {project.githubClient && (
+                        <a
+                          href={project.githubClient}
+                          target="_blank"
+                          className="p-3 rounded-2xl bg-white/5 border border-white/10 text-white/60 hover:text-white hover:border-indigo-500/50 transition-all"
+                        >
+                          <FiGithub size={20} />
+                        </a>
+                      )}
+                      {project.githubServer && (
+                        <a
+                          href={project.githubServer}
+                          target="_blank"
+                          className="p-3 rounded-2xl bg-white/5 border border-white/10 text-white/60 hover:text-white hover:border-indigo-500/50 transition-all"
+                        >
+                          <HiOutlineCodeBracket size={20} />
+                        </a>
+                      )}
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>
