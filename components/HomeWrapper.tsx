@@ -56,7 +56,7 @@ export default function HomeWrapper({
       </div>
 
       {/* Page content */}
-      <div className="relative flex flex-col justify-center items-start px-2 lg:px-4 xl:px-8">
+      <div className="relative flex flex-col justify-center items-start px-4 lg:px-6 xl:px-8">
         {children}
       </div>
     </div>
