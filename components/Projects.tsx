@@ -88,7 +88,7 @@ function Projects() {
             {projects.map((project, index) => (
               <div
                 key={project.id}
-                className={`relative flex flex-col lg:flex-row gap-8 items-center group p-6 md:p-8 rounded-[3rem] border border-white/15 hover:border-white/20 transition-all duration-500 overflow-hidden jellyfish-card ${project.bgClass}`}
+                className={`relative flex flex-col lg:flex-row gap-8 items-center group p-6 md:p-8 rounded-3xl md:rounded-[3rem] border border-white/15 hover:border-white/20 transition-all duration-500 overflow-hidden jellyfish-card ${project.bgClass}`}
               >
                 {/* Dynamic Animated Glow behind the card */}
                 <div
@@ -98,10 +98,10 @@ function Projects() {
 
                 {/* Image Side */}
                 <div
-                  className={`w-full lg:w-7/12 relative rounded-[2rem] border border-white/10 bg-black/40 p-2 overflow-hidden
+                  className={`w-full lg:w-7/12 relative rounded-2xl md:rounded-[2rem] border border-white/10 bg-black/40 p-2 overflow-hidden
                 ${index % 2 === 0 ? "lg:order-2" : "lg:order-1"}`}
                 >
-                  <div className="h-80 md:h-100 overflow-y-auto hide-scrollbar rounded-[1.5rem] border border-white/5 relative bg-[#0a0a0a]">
+                  <div className="h-80 md:h-100 overflow-y-auto hide-scrollbar rounded-xl md:rounded-[1.5rem] border border-white/5 relative bg-[#0a0a0a]">
                     <Image
                       src={project.image}
                       alt={project.name}

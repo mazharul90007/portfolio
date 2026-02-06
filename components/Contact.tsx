@@ -69,7 +69,7 @@ const Contact = () => {
         {/* Main Contact Card */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
           {/* LEFT: Info Bento Card */}
-          <div className="lg:col-span-5 relative group p-8 md:p-12 rounded-[3rem] bg-linear-to-b from-indigo-500/8 via-transparent to-blue-500/7 overflow-hidden border border-white/15 hover:border-indigo-500/30 transition-all duration-500 jellyfish-card">
+          <div className="lg:col-span-5 relative group p-8 md:p-12 rounded-3xl md:rounded-[3rem] bg-linear-to-b from-indigo-500/8 via-transparent to-blue-500/7 overflow-hidden border border-white/15 hover:border-indigo-500/30 transition-all duration-500 jellyfish-card">
             <div className="absolute -top-24 -left-24 w-80 h-80 bg-indigo-600/15 blur-[100px] rounded-full" />
 
             <div className="relative z-10 flex flex-col items-center text-center lg:items-start lg:text-left">
@@ -136,7 +136,7 @@ const Contact = () => {
           </div>
 
           {/* RIGHT: Form Bento Card */}
-          <div className="lg:col-span-7 relative group p-8 md:p-12 rounded-[3rem] bg-linear-to-br from-purple-500/8 via-transparent to-blue-500/6 overflow-hidden border border-white/15 hover:border-indigo-500/30 transition-all duration-500 jellyfish-card">
+          <div className="lg:col-span-7 relative group p-8 md:p-12 rounded-3xl md:rounded-[3rem] bg-linear-to-br from-purple-500/8 via-transparent to-blue-500/6 overflow-hidden border border-white/15 hover:border-indigo-500/30 transition-all duration-500 jellyfish-card">
             <div className="absolute -bottom-24 -right-24 w-80 h-80 bg-purple-600/10 blur-[100px] rounded-full" />
 
             <h3 className="text-2xl font-bold text-white mb-8 tracking-tight flex items-center gap-3">
@@ -156,8 +156,8 @@ const Contact = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    placeholder="John Doe"
-                    className="w-full px-6 py-4 rounded-2xl bg-white/5 border border-white/10 text-white focus:outline-none focus:border-indigo-500/50 transition-all placeholder:text-white/10"
+                    placeholder="Your Name"
+                    className="w-full px-6 py-4 rounded-2xl bg-[#050507]/40 border border-white/10 hover:border-purple-500/30 text-white focus:outline-none focus:border-indigo-500/50 transition-all placeholder:text-white/30"
                   />
                 </div>
                 <div className="space-y-2">
@@ -170,8 +170,8 @@ const Contact = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    placeholder="john@example.com"
-                    className="w-full px-6 py-4 rounded-2xl bg-white/5 border border-white/10 text-white focus:outline-none focus:border-indigo-500/50 transition-all placeholder:text-white/10"
+                    placeholder="Your Email"
+                    className="w-full px-6 py-4 rounded-2xl bg-[#050507]/40 border border-white/10 hover:border-purple-500/30 text-white focus:outline-none focus:border-indigo-500/50 transition-all placeholder:text-white/30"
                   />
                 </div>
               </div>
@@ -187,7 +187,7 @@ const Contact = () => {
                   rows={12}
                   required
                   placeholder="Tell me about your project..."
-                  className="w-full px-6 py-4 rounded-2xl bg-white/5 border border-white/10 text-white focus:outline-none focus:border-indigo-500/50 transition-all placeholder:text-white/10 resize-none"
+                  className="w-full px-6 py-4 rounded-2xl bg-[#050507]/40 border border-white/10 hover:border-purple-500/30 text-white focus:outline-none focus:border-indigo-500/50 transition-all placeholder:text-white/30 resize-none"
                 />
               </div>
 

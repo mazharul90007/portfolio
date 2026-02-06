@@ -70,7 +70,7 @@ const Certifications = () => {
           {certData.map((cert, idx) => (
             <div
               key={idx}
-              className={`relative group p-8 rounded-[2.5rem] border border-white/10 hover:border-indigo-500/40 transition-all duration-500 overflow-hidden flex flex-col justify-between jellyfish-card 
+              className={`relative group p-8 rounded-3xl md:rounded-[2.5rem] bg-white/2 border border-white/10 hover:border-indigo-500/40 transition-all duration-500 overflow-hidden flex flex-col justify-between jellyfish-card 
                 ${cert.isFeatured ? "lg:col-span-2" : "col-span-1"} 
                 ${cert.bgClass}`}
             >

@@ -109,7 +109,7 @@ const Navbar = () => {
 
         {/* Desktop Navigation */}
         <div className="hidden items-center gap-6 md:flex">
-          <div className="flex items-center gap-6 px-6 py-3 rounded-full bg-white/5 border border-white/10 backdrop-blur-md">
+          <div className="flex items-center gap-6 px-6 py-3 rounded-xl bg-white/5 border border-white/10 backdrop-blur-md">
             {navLinks.map((link) => {
               const sectionId =
                 link.href === "/" ? "home" : link.href.replace("/#", "");
