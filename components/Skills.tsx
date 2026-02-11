@@ -1,5 +1,12 @@
 "use client";
-import { FaReact, FaNodeJs, FaGithub, FaFigma, FaDocker } from "react-icons/fa";
+import {
+  FaReact,
+  FaNodeJs,
+  FaGithub,
+  FaFigma,
+  FaDocker,
+  FaAws,
+} from "react-icons/fa";
 import {
   SiRedux,
   SiTypescript,
@@ -62,6 +69,7 @@ const backendTech = [
   { name: "MongoDB", icon: SiMongodb, color: "#47A248" },
   { name: "JWT", icon: SiJsonwebtokens, color: "#ffffff" },
   { name: "Zod", icon: SiZod, color: "#3E67B1" },
+  { name: "AWS", icon: FaAws, color: "#FF9900" },
 ];
 
 const designTech = [
@@ -218,7 +226,7 @@ const Skills = () => {
         </div>
 
         {/* Soft Skills Section */}
-        <div className=" mt-6 group p-10 rounded-3xl md:rounded-[3rem] bg-white/2 border border-white/10 hover:border-indigo-500/40 transition-all duration-300 bg-white/2 overflow-hidden relative jellyfish-card">
+        <div className=" mt-6 group p-10 rounded-3xl md:rounded-[3rem] border border-white/10 hover:border-indigo-500/40 transition-all duration-300 bg-white/2 overflow-hidden relative jellyfish-card">
           <div className="absolute -right-20 -bottom-20 w-64 h-64 bg-indigo-500/10 blur-[100px] rounded-full" />
           <h3 className="text-white font-bold uppercase tracking-[0.3em] text-xs mb-8 flex items-center gap-3">
             <SiHyperskill className="text-indigo-500 animate-pulse" /> Core
