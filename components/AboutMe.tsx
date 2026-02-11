@@ -56,22 +56,24 @@ const AboutMe = () => {
           {aboutData.map((item, index) => (
             <div
               key={index}
-              className="group p-6 rounded-3xl md:rounded-[2rem] bg-white/3 border border-white/10 hover:border-indigo-500/50 hover:bg-indigo-500/2 transition-all duration-500 jellyfish-card"
+              className="group p-6 flex flex-row-reverse justify-between items-center md:flex-col md:items-start rounded-3xl md:rounded-[2rem] bg-white/3 border border-white/10 hover:border-indigo-500/50 hover:bg-indigo-500/2 transition-all duration-500 jellyfish-card"
             >
               <div className="w-10 h-10 rounded-full bg-indigo-500/10 flex items-center justify-center mb-4 text-indigo-400 group-hover:scale-110 group-hover:bg-indigo-500 group-hover:text-white transition-all">
                 <item.icon size={20} />
               </div>
-              <p className="text-white/30 text-[10px] uppercase tracking-[0.2em] font-bold mb-1">
-                {item.label}
-              </p>
-              <p className="text-white/90 font-medium text-sm truncate">
-                {item.value}
-              </p>
+              <div>
+                <p className="text-white/30 text-[10px] uppercase tracking-[0.2em] font-bold mb-1">
+                  {item.label}
+                </p>
+                <p className="text-white/90 font-medium text-sm truncate">
+                  {item.value}
+                </p>
+              </div>
             </div>
           ))}
 
           {/* Large Address Card */}
-          <div className="sm:col-span-2 p-8 rounded-3xl md:rounded-[2rem] bg-linear-to-br from-indigo-600/10 to-purple-600/10 border border-indigo-500/20 relative overflow-hidden group jellyfish-card">
+          <div className="sm:col-span-2 p-6 rounded-3xl md:rounded-[2rem] bg-linear-to-br from-indigo-600/10 to-purple-600/10 border border-indigo-500/20 relative overflow-hidden group jellyfish-card">
             <div className="relative z-10 flex items-center justify-between">
               <div>
                 <p className="text-indigo-400 text-xs uppercase tracking-widest font-bold mb-2">
