@@ -87,7 +87,7 @@ const Navbar = () => {
           : "py-6 bg-transparent"
       }`}
     >
-      <div className="mx-auto max-w-7xl flex  items-center justify-between px-6 overflow-x-hidden">
+      <div className="mx-auto max-w-7xl flex  items-center justify-between overflow-x-hidden">
         {/* Logo Section */}
         <Link
           href="/"
@@ -121,7 +121,7 @@ const Navbar = () => {
                   href={link.href}
                   onClick={(e) => handleSmoothScroll(e, link.href)}
                   className={`text-xs font-bold uppercase tracking-widest transition-all hover:text-white ${
-                    isActive ? "text-indigo-400 scale-105" : "text-white/40"
+                    isActive ? "text-indigo-400 scale-105" : "text-white/50"
                   }`}
                 >
                   {link.name}
