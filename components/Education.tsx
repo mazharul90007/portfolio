@@ -54,7 +54,7 @@ const Education = () => {
           {educationData.map((edu, idx) => (
             <div
               key={idx}
-              className={`relative group p-8 md:p-10 rounded-3xl md:rounded-[2.5rem] bg-white/2 border border-white/10 jellyfish-card transition-all duration-700 ease-out overflow-hidden ${edu.bgClass}`}
+              className={`relative group p-6 md:p-10 rounded-3xl md:rounded-[2.5rem] bg-white/2 border border-white/10 jellyfish-card transition-all duration-700 ease-out overflow-hidden ${edu.bgClass}`}
             >
               {/* Magic Shine Effect */}
               <ShineBorder

@@ -148,7 +148,7 @@ const Skills = () => {
         {/* ===============Card Sections============== */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
           {/* 1. Frontend - Featured Wide Card */}
-          <div className="lg:col-span-3 relative group p-10 rounded-3xl md:rounded-[3rem] border border-white/10 hover:border-indigo-500/40 transition-all duration-300 overflow-hidden bg-[#0a0a0a]/10 jellyfish-card">
+          <div className="lg:col-span-3 relative group p-6 md:p-10 rounded-3xl md:rounded-[3rem] border border-white/10 hover:border-indigo-500/40 transition-all duration-300 overflow-hidden bg-[#0a0a0a]/10 jellyfish-card">
             {/* Eye-Catching Background Glow */}
             <div className="absolute -top-24 -left-24 w-80 h-80 bg-blue-600/20 blur-[100px] rounded-full group-hover:bg-blue-600/30 transition-colors duration-700" />
 
@@ -168,7 +168,7 @@ const Skills = () => {
           </div>
 
           {/* 2. Backend - Standard Card */}
-          <div className="lg:col-span-2 relative group p-10 rounded-3xl md:rounded-[3rem] border border-white/10 hover:border-indigo-500/40 transition-all duration-300 overflow-hidden bg-[#0a0a0a]/10 jellyfish-card">
+          <div className="lg:col-span-2 relative group p-6 md:p-10 rounded-3xl md:rounded-[3rem] border border-white/10 hover:border-indigo-500/40 transition-all duration-300 overflow-hidden bg-[#0a0a0a]/10 jellyfish-card">
             <div className="absolute -bottom-24 -right-24 w-80 h-80 bg-purple-600/20 blur-[100px] rounded-full group-hover:bg-purple-600/30 transition-colors duration-700" />
 
             <div className="relative z-10">
@@ -187,7 +187,7 @@ const Skills = () => {
           </div>
 
           {/* 3. Design Tools - Standard Card */}
-          <div className="lg:col-span-2 relative group p-10 rounded-3xl md:rounded-[3rem] border border-white/10 hover:border-indigo-500/40 transition-all duration-300 overflow-hidden bg-[#0a0a0a]/10 jellyfish-card">
+          <div className="lg:col-span-2 relative group p-6 md:p-10 rounded-3xl md:rounded-[3rem] border border-white/10 hover:border-indigo-500/40 transition-all duration-300 overflow-hidden bg-[#0a0a0a]/10 jellyfish-card">
             <div className="absolute -top-24 -right-24 w-64 h-64 bg-pink-600/20 blur-[80px] rounded-full" />
 
             <div className="relative z-10">
@@ -206,7 +206,7 @@ const Skills = () => {
           </div>
 
           {/* 4. Dev Tools - Featured Wide Card */}
-          <div className="lg:col-span-3 relative group p-10 rounded-3xl md:rounded-[3rem] border border-white/10 hover:border-indigo-500/40 transition-all duration-300 overflow-hidden bg-[#0a0a0a]/10 jellyfish-card">
+          <div className="lg:col-span-3 relative group p-6 md:p-10 rounded-3xl md:rounded-[3rem] border border-white/10 hover:border-indigo-500/40 transition-all duration-300 overflow-hidden bg-[#0a0a0a]/10 jellyfish-card">
             <div className="absolute inset-0 bg-linear-to-r from-indigo-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
 
             <div className="relative z-10">
@@ -226,7 +226,7 @@ const Skills = () => {
         </div>
 
         {/* Soft Skills Section */}
-        <div className=" mt-6 group p-10 rounded-3xl md:rounded-[3rem] border border-white/10 hover:border-indigo-500/40 transition-all duration-300 bg-white/2 overflow-hidden relative jellyfish-card">
+        <div className=" mt-6 group p-6 md:p-10 rounded-3xl md:rounded-[3rem] border border-white/10 hover:border-indigo-500/40 transition-all duration-300 bg-white/2 overflow-hidden relative jellyfish-card">
           <div className="absolute -right-20 -bottom-20 w-64 h-64 bg-indigo-500/10 blur-[100px] rounded-full" />
           <h3 className="text-white font-bold uppercase tracking-[0.3em] text-xs mb-8 flex items-center gap-3">
             <SiHyperskill className="text-indigo-500 animate-pulse" /> Core

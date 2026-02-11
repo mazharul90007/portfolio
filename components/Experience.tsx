@@ -34,7 +34,7 @@ const Experience = () => {
           </div>
 
           {/* Main Experience Card */}
-          <div className="group relative p-8 md:p-10 rounded-3xl md:rounded-[2.5rem] bg-white/2 border border-white/10 hover:border-indigo-500/30 hover:bg-indigo-500/1 transition-all duration-500 jellyfish-card">
+          <div className="group relative p-6 md:p-10 rounded-3xl md:rounded-[2.5rem] bg-white/2 border border-white/10 hover:border-indigo-500/30 hover:bg-indigo-500/1 transition-all duration-500 jellyfish-card">
             {/* Header Info */}
             <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-6 mb-10">
               <div>

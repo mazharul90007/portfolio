@@ -5,7 +5,7 @@ import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope } from "react-icons/fa";
 const Footer = () => {
   return (
     <footer className="bg-gray-900 text-white w-full">
-      <div className="max-w-7xl mx-auto px-4 py-6 flex flex-col md:flex-row justify-between items-center">
+      <div className="max-w-7xl mx-auto py-6 flex flex-col md:flex-row justify-between items-center">
         {/* Footer Text */}
         <p className="text-white/50 text-lg">
           © {new Date().getFullYear()} miSourabh. All rights reserved.
@@ -22,7 +22,7 @@ const Footer = () => {
             <FaGithub />
           </a>
           <a
-            href="https://www.linkedin.com/in/mazharul-islam-sourabh-4111b3227/"
+            href="https://www.linkedin.com/in/misourabh"
             target="_blank"
             rel="noopener noreferrer"
             className="text-white/90 hover:text-white text-2xl"
@@ -38,7 +38,7 @@ const Footer = () => {
             <FaTwitter />
           </a>
           <a
-            href="mailto:mazharul90006@gmail.com"
+            href="mailto:mazharul90007@gmail.com"
             className="text-white/90 hover:text-white text-2xl"
           >
             <FaEnvelope />
