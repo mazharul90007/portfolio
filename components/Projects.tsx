@@ -9,6 +9,32 @@ const projects = [
   {
     id: 1,
     image:
+      "https://res.cloudinary.com/dp6urj3gj/image/upload/v1772129904/chemist-bd-ss_jsqzwm.png",
+    name: "Chemist BD",
+    type: "Ecommerce Website",
+    description:
+      "CHEMIST BD is a modern, responsive e-commerce frontend designed for pharmacies. It provides a seamless experience for customers to browse medicines, manage their cart, and place orders, while offering powerful dashboards for sellers and administrators.",
+    liveLink: "https://chemistbd-client.vercel.app",
+    githubClient: "https://github.com/mazharul90007/chemist-bd",
+    githubServer: "https://github.com/mazharul90007/chemist-bd-server",
+    color: "#10b981",
+    bgClass:
+      "bg-[radial-gradient(ellipse_at_top_right,rgba(16,185,129,0.1),transparent_70%)]",
+    tags: [
+      "Next.js 15",
+      "Zustand",
+      "TanStack",
+      "ShadcnUI",
+      "Express.js",
+      "Better Auth",
+      "PostgreSQL",
+      "Prisma",
+      "TypeScript",
+    ],
+  },
+  {
+    id: 2,
+    image:
       "https://res.cloudinary.com/dp6urj3gj/image/upload/v1769278587/workboard_j5hlmt.png",
     name: "Work Board",
     type: "Task Management Website",
@@ -22,6 +48,8 @@ const projects = [
       "bg-linear-to-br from-indigo-500/[0.1] via-purple-500/[0.03] to-transparent",
     tags: [
       "Next.js 15",
+      "Zustand",
+      "TanStack",
       "Nest.js",
       "PostgreSQL",
       "Prisma",
@@ -30,7 +58,7 @@ const projects = [
     ],
   },
   {
-    id: 2,
+    id: 3,
     image:
       "https://res.cloudinary.com/dp6urj3gj/image/upload/v1765627636/bd-destinationERD_pftztz.png",
     name: "BD-DESTINATION",
@@ -45,7 +73,7 @@ const projects = [
     tags: ["Node.js", "Express", "TypeScript", "PostgreSQL", "Prisma", "Zod"],
   },
   {
-    id: 3,
+    id: 4,
     image:
       "https://res.cloudinary.com/dp6urj3gj/image/upload/v1766114389/EzyTicket_jg6den.webp",
     name: "Ezy Ticket",
