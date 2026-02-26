@@ -71,22 +71,22 @@ const projects = [
       "bg-[radial-gradient(ellipse_at_top_right,rgba(16,185,129,0.1),transparent_70%)]",
     tags: ["Node.js", "Express", "TypeScript", "PostgreSQL", "Prisma", "Zod"],
   },
-  {
-    id: 4,
-    image:
-      "https://res.cloudinary.com/dp6urj3gj/image/upload/v1766114389/EzyTicket_jg6den.webp",
-    name: "Ezy Ticket",
-    type: "Online Ticket Booking Website",
-    description:
-      "EzyTicket is an online ticket booking platform with secure payments, role-based dashboards, and full CRUD functionality.",
-    liveLink: "https://ezyticket-7198b.web.app/",
-    githubClient: "https://github.com/mazharul90007/ezyTicket-client",
-    githubServer: "https://github.com/mazharul90007/ezyTicket-server-2",
-    color: "#3b82f6",
-    bgClass:
-      "bg-[radial-gradient(ellipse_at_bottom_left,rgba(59,130,246,0.1),transparent_70%)]",
-    tags: ["React", "TypeScript", "Firebase", "Node.js", "MongoDB", "Stripe"],
-  },
+  // {
+  //   id: 4,
+  //   image:
+  //     "https://res.cloudinary.com/dp6urj3gj/image/upload/v1766114389/EzyTicket_jg6den.webp",
+  //   name: "Ezy Ticket",
+  //   type: "Online Ticket Booking Website",
+  //   description:
+  //     "EzyTicket is an online ticket booking platform with secure payments, role-based dashboards, and full CRUD functionality.",
+  //   liveLink: "https://ezyticket-7198b.web.app/",
+  //   githubClient: "https://github.com/mazharul90007/ezyTicket-client",
+  //   githubServer: "https://github.com/mazharul90007/ezyTicket-server-2",
+  //   color: "#3b82f6",
+  //   bgClass:
+  //     "bg-[radial-gradient(ellipse_at_bottom_left,rgba(59,130,246,0.1),transparent_70%)]",
+  //   tags: ["React", "TypeScript", "Firebase", "Node.js", "MongoDB", "Stripe"],
+  // },
 ];
 
 function Projects() {
