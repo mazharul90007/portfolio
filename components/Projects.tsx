@@ -53,7 +53,6 @@ const projects = [
       "Nest.js",
       "PostgreSQL",
       "Prisma",
-      "Zustand",
       "TypeScript",
     ],
   },
