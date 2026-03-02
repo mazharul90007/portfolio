@@ -35,6 +35,33 @@ const projects = [
   {
     id: 2,
     image:
+      "https://res.cloudinary.com/dp6urj3gj/image/upload/v1772490207/quick-hire-ss_sarodt.png",
+    name: "Quick Hire",
+    type: "Job portal Application",
+    description:
+      "QUICK HIRE CLIENT is a modern, responsive job portal frontend designed for a seamless recruitment experience. It allows applicants to discover opportunities, manage their profiles, and track applications, while providing administrators with a powerful dashboard for managing job listings and platform operations.",
+    liveLink: "https://quick-hire-client-chi.vercel.app",
+    githubClient: "https://github.com/mazharul90007/quick-hire",
+    githubServer: "https://github.com/mazharul90007/quick-hire-server",
+    color: "#10b981",
+    bgClass:
+      "bg-linear-to-br from-indigo-500/[0.1] via-purple-500/[0.03] to-transparent",
+    tags: [
+      "Next.js 15",
+      "Zustand",
+      "TanStack",
+      "ShadcnUI",
+      "Express.js",
+      "Better Auth",
+      "Zod",
+      "PostgreSQL",
+      "Prisma",
+      "TypeScript",
+    ],
+  },
+  {
+    id: 3,
+    image:
       "https://res.cloudinary.com/dp6urj3gj/image/upload/v1769278587/workboard_j5hlmt.png",
     name: "Work Board",
     type: "Task Management Website",
@@ -45,7 +72,7 @@ const projects = [
     githubServer: "https://github.com/mazharul90007/workboard-server-nestjs",
     color: "#6366f1",
     bgClass:
-      "bg-linear-to-br from-indigo-500/[0.1] via-purple-500/[0.03] to-transparent",
+      "bg-[radial-gradient(ellipse_at_top_right,rgba(16,185,129,0.1),transparent_70%)]",
     tags: [
       "Next.js 15",
       "Zustand",
@@ -57,7 +84,7 @@ const projects = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     image:
       "https://res.cloudinary.com/dp6urj3gj/image/upload/v1765627636/bd-destinationERD_pftztz.png",
     name: "BD-DESTINATION",
@@ -68,7 +95,7 @@ const projects = [
     githubServer: "https://github.com/mazharul90007/bd-destination",
     color: "#10b981",
     bgClass:
-      "bg-[radial-gradient(ellipse_at_top_right,rgba(16,185,129,0.1),transparent_70%)]",
+      "bg-linear-to-br from-indigo-500/[0.1] via-purple-500/[0.03] to-transparent",
     tags: ["Node.js", "Express", "TypeScript", "PostgreSQL", "Prisma", "Zod"],
   },
   // {
