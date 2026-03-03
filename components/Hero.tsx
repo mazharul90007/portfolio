@@ -7,7 +7,7 @@ import { BorderBeam } from "@/components/ui/border-beam";
 
 const Hero = () => {
   return (
-    <section className="relative w-full ">
+    <section className="relative w-full overflow-hidden">
       {/* Dynamic Ambient Glows */}
       <div className="absolute -top-20 -left-10 w-72 h-72 bg-blue-600/10 blur-[120px] rounded-full" />
       <div className="absolute bottom-0 right-0 w-72 h-72 bg-purple-600/10 blur-[120px] rounded-full" />

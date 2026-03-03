@@ -81,7 +81,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 w-full z-50 transition-all px-4 duration-300 ${
         scrolled
           ? "py-4 bg-black/60 backdrop-blur-xl border-b border-white/5"
           : "py-6 bg-transparent"
@@ -132,12 +132,12 @@ const Navbar = () => {
 
           {/* Desktop CTA */}
           <Link
-            href="/resume/Resume_of_Sourabh.pdf"
+            href="/cv/CV_of_Sourabh.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="group/btn flex items-center gap-2 py-3 px-5 rounded-xl text-xs font-bold uppercase tracking-widest text-black bg-white hover:bg-indigo-500 hover:text-white transition-all duration-300 shadow-lg shadow-white/5 hover:shadow-indigo-500/20"
           >
-            Resume
+            View CV
             <RiArrowRightDoubleFill
               size={16}
               className="transform group-hover/btn:translate-x-1 transition-transform duration-300"
@@ -167,7 +167,7 @@ const Navbar = () => {
           open ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        <div className="flex flex-col gap-8 px-8 py-32 h-screen bg-black/60">
+        <div className="flex flex-col gap-8 px-8 py-32 h-screen bg-black/60 overflow-y-auto">
           {navLinks.map((link) => {
             const sectionId =
               link.href === "/" ? "home" : link.href.replace("/#", "");
@@ -188,6 +188,20 @@ const Navbar = () => {
               </Link>
             );
           })}
+
+          {/* Mobile CTA moved inside the container */}
+          <Link
+            href="/cv/CV_of_Sourabh.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-4 group/btn flex items-center justify-center gap-2 py-4 px-6 rounded-xl text-xs font-bold uppercase tracking-widest text-black bg-white hover:bg-indigo-500 hover:text-white transition-all duration-300 shadow-lg shadow-white/5 hover:shadow-indigo-500/20"
+          >
+            View CV
+            <RiArrowRightDoubleFill
+              size={16}
+              className="transform group-hover/btn:translate-x-1 transition-transform duration-300"
+            />
+          </Link>
         </div>
       </div>
     </nav>

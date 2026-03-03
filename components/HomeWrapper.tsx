@@ -39,10 +39,9 @@ export default function HomeWrapper({
   }, []);
 
   return (
-    <div className="relative">
+    <div className="relative overflow-hidden w-full">
       {/* Background */}
-      <div className="fixed inset-0 pointer-events-none">
-        {" "}
+      <div className="fixed inset-0 pointer-events-none z-0">
         <Particles
           particleColors={["#ffffff", "#ffffff"]}
           particleCount={1000}
@@ -56,7 +55,7 @@ export default function HomeWrapper({
       </div>
 
       {/* Page content */}
-      <div className="relative flex flex-col justify-center items-start px-4 lg:px-6 xl:px-8">
+      <div className="relative z-10 flex flex-col justify-center items-start w-full px-4 lg:px-6 xl:px-8">
         {children}
       </div>
     </div>
