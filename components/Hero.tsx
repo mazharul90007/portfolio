@@ -30,8 +30,8 @@ const Hero = () => {
           </h1>
 
           <p className="max-w-xl text-lg md:text-xl text-white/50 font-medium mt-6 mb-10 leading-relaxed">
-            Full Stack Web Developer crafting high-performance, user-centric
-            applications with the modern web stack.
+            Full Stack Web & App Developer crafting high-performance,
+            user-centric applications with the modern web stack.
           </p>
 
           <div className="flex flex-wrap items-center justify-center md:justify-start gap-4">

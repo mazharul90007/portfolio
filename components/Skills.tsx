@@ -42,10 +42,12 @@ import {
 import { RiBearSmileFill } from "react-icons/ri";
 import { MdDesignServices } from "react-icons/md";
 import { IconType } from "react-icons/lib";
+import { TfiAndroid } from "react-icons/tfi";
 
 const frontendTech = [
   { name: "Next.js", icon: SiNextdotjs, color: "#ffffff" },
   { name: "React", icon: FaReact, color: "#61DAFB" },
+  { name: "React Native", icon: TfiAndroid, color: "#3DDC84" },
   { name: "Zustand", icon: RiBearSmileFill, color: "#443E38" },
   { name: "Redux", icon: SiRedux, color: "#764ABC" },
   { name: "TypeScript", icon: SiTypescript, color: "#3178C6" },
