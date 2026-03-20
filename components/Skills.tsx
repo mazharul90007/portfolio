@@ -108,7 +108,7 @@ const Skills = () => {
     name: string;
     color: string;
   }) => (
-    <div id="skills" className="flex flex-col gap-1 items-center">
+    <div className="flex flex-col gap-1 items-center">
       <div className="flex relative w-14 h-14 md:w-24 md:h-24 rounded-2xl bg-white/5 border border-white/10 items-center justify-center transition-all duration-300 group-hover/item:bg-white/15 group-hover/item:-translate-y-2 group-hover/item:border-white/30">
         <Icon
           size={36}
@@ -128,7 +128,7 @@ const Skills = () => {
   );
 
   return (
-    <section className="relative py-24 w-full overflow-hidden">
+    <section id="skills" className="relative py-24 w-full overflow-hidden">
       {/* Intense Background Glows */}
       <div className="absolute top-0 right-0 w-125 h-125 bg-indigo-600/10 blur-[150px] rounded-full -z-10" />
       <div className="absolute bottom-0 left-0 w-125 h-125 bg-blue-600/10 blur-[150px] rounded-full -z-10" />

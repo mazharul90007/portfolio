@@ -16,7 +16,7 @@ const educationData = [
     details: "Focus on Analytical Logic & Computational Foundations",
     icon: LuBookOpen,
     bgClass:
-      "bg-linear-to-b from-indigo-500/[0.08] via-transparent to-blue-500/[0.05]",
+      "bg-linear-to-b from-indigo-500/[0.09] via-transparent to-blue-500/[0.06]",
   },
   {
     degree: "Higher Secondary Certificate (HSC)",
@@ -26,7 +26,7 @@ const educationData = [
     details: "Science Group • Major in Physics, Chemistry & Higher Math",
     icon: LuGraduationCap,
     bgClass:
-      "bg-linear-to-br from-purple-500/[0.05] via-transparent to-blue-500/[0.05]",
+      "bg-linear-to-br from-purple-500/[0.08] via-transparent to-blue-500/[0.06]",
   },
 ];
 

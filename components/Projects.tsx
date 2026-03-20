@@ -43,7 +43,7 @@ const projects = [
     liveLink: "https://quick-hire-client-chi.vercel.app",
     githubClient: "https://github.com/mazharul90007/quick-hire",
     githubServer: "https://github.com/mazharul90007/quick-hire-server",
-    color: "#10b981",
+    color: "#6366f1",
     bgClass:
       "bg-linear-to-br from-indigo-500/[0.1] via-purple-500/[0.03] to-transparent",
     tags: [
@@ -70,7 +70,7 @@ const projects = [
     liveLink: "https://workboard-client.vercel.app/",
     githubClient: "https://github.com/mazharul90007/work-board-client",
     githubServer: "https://github.com/mazharul90007/workboard-server-nestjs",
-    color: "#6366f1",
+    color: "#10b981",
     bgClass:
       "bg-[radial-gradient(ellipse_at_top_right,rgba(16,185,129,0.1),transparent_70%)]",
     tags: [
@@ -93,7 +93,7 @@ const projects = [
       "A travel guide platform built with Node.js and Express, offering comprehensive information about beautiful tourist destinations in Bangladesh.",
     liveLink: "https://bd-destination.vercel.app",
     githubServer: "https://github.com/mazharul90007/bd-destination",
-    color: "#10b981",
+    color: "#6366f1",
     bgClass:
       "bg-linear-to-br from-indigo-500/[0.1] via-purple-500/[0.03] to-transparent",
     tags: ["Node.js", "Express", "TypeScript", "PostgreSQL", "Prisma", "Zod"],

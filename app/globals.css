@@ -107,7 +107,7 @@ section[id] {
   }
 
   .jellyfish-card:hover {
-    @apply border-indigo-500/40;
+    @apply border-indigo-500/50;
 
     box-shadow:
       inset 0 0 50px rgba(99, 102, 241, 0.4),
