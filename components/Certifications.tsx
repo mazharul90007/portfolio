@@ -4,26 +4,39 @@ import { ShineBorder } from "@/components/ui/shine-border";
 
 const certData = [
   {
+    id: 1,
     title: "Next Level Web Development 3.0",
     institution: "Programming Hero (Batch-6)",
     duration: "October 2025 — Present",
     address: "Online",
     color: "#6366f1",
-    // Featured Background: Wide gradient
     bgClass:
       "bg-linear-to-br from-indigo-500/12 via-transparent to-purple-500/6",
     isFeatured: true,
   },
   {
+    id: 2,
     title: "Complete Web Development",
     institution: "Programming Hero (Batch-10)",
     duration: "June 2024 — Jan 2025",
+    address: "Online",
+    color: "#a855f7",
+    bgClass:
+      "bg-[radial-gradient(ellipse_at_top_right,rgba(168,85,247,0.12),transparent_70%)]",
+    isFeatured: false,
+  },
+  {
+    id: 3,
+    title: "React Native - The Practical Guide",
+    institution: "Udemy - Academind by Maximilian Schwarzmuller",
+    duration: "November 2025 — March 2026",
     address: "Online",
     color: "#6366f1",
     bgClass: "bg-linear-to-br from-purple-500/5 via-transparent to-blue-500/7",
     isFeatured: false,
   },
   {
+    id: 4,
     title: "Professional Web Design",
     institution: "BASIS SEIP",
     duration: "April 2023 — June 2023",
@@ -34,6 +47,7 @@ const certData = [
     isFeatured: false,
   },
   {
+    id: 5,
     title: "Web Design & Development",
     institution: "UY LAB",
     duration: "Jan 2023 — July 2023",
@@ -41,7 +55,7 @@ const certData = [
     color: "#3b82f6",
     bgClass:
       "bg-[radial-gradient(ellipse_at_bottom_right,rgba(59,130,246,0.12),transparent_70%)]",
-    isFeatured: true,
+    isFeatured: false,
   },
 ];
 
