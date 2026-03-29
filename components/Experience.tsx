@@ -6,6 +6,37 @@ import {
   LuCircleCheck,
 } from "react-icons/lu";
 
+const experiences = [
+  {
+    title: "Full Stack Developer",
+    company: "AxentraLab",
+    dateRange: "25/03/2026 — Present",
+    arrangement: "Full Time • Hybrid",
+    location: "Dhanmondi, Dhaka",
+    highlights: [
+      "Full-time Full Stack Developer contributing across frontend and backend for AxentraLab products",
+      "Working in a hybrid model with onsite presence in Dhanmondi, Dhaka",
+      "Collaborating with the team on design, implementation, and delivery of web features",
+      "Building maintainable, user-focused solutions end to end",
+    ],
+  },
+  {
+    title: "Backend Developer",
+    company: "SM Technology",
+    dateRange: "06/2025 — 10/2025",
+    arrangement: "Full Time • Onsite",
+    location: "H-14, Main Road, Block - A, Banasree, Rampura, Dhaka-1219",
+    highlights: [
+      "Designed scalable REST APIs using Node.js, Nest.js, Express.js TypeScript, Prisma & PostgreSQL",
+      "Implemented secure RBAC and JWT-based authentication systems",
+      "Integrated Stripe & PayPal for safe real-time payment processing",
+      "Optimized asset storage using AWS S3 cloud infrastructure",
+      "Configured Nginx Reverse Proxies and PM2 for production VPS deployment",
+      "Managed DNS, SSL certificates, and Domain configurations",
+    ],
+  },
+];
+
 const Experience = () => {
   return (
     <section id="experience" className="relative py-16 w-full overflow-hidden">
@@ -26,70 +57,58 @@ const Experience = () => {
           </span>
         </h2>
 
-        {/* Experience Timeline Item */}
-        <div className="relative md:pl-12 md:border-l border-white/10 md:ml-4">
-          {/* Timeline Dot/Icon */}
-          <div className="hidden md:absolute -left-6 top-0 w-12 h-12 rounded-full bg-[#0a0a0a] border border-white/10 md:flex items-center justify-center text-indigo-400 shadow-[0_0_20px_rgba(99,102,241,0.2)]">
-            <LuBriefcase size={20} />
-          </div>
-
-          {/* Main Experience Card */}
-          <div className="group relative p-6 md:p-10 rounded-3xl md:rounded-[2.5rem] bg-white/2 border border-white/10 hover:border-indigo-500/30 hover:bg-indigo-500/1 transition-all duration-500 jellyfish-card">
-            {/* Header Info */}
-            <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-6 mb-10">
-              <div>
-                <h3 className="text-3xl md:text-4xl text-white font-bold mb-2 group-hover:text-indigo-400 transition-colors">
-                  Backend Developer
-                </h3>
-                <div className="flex items-center gap-2 text-indigo-400/80 font-semibold text-lg italic">
-                  SM Technology
-                </div>
+        <div className="relative md:pl-12 md:border-l border-white/10 md:ml-4 flex flex-col gap-12 md:gap-16">
+          {experiences.map((job) => (
+            <div key={job.company} className="relative">
+              <div className="hidden md:absolute -left-6 top-0 w-12 h-12 rounded-full bg-[#0a0a0a] border border-white/10 md:flex items-center justify-center text-indigo-400 shadow-[0_0_20px_rgba(99,102,241,0.2)]">
+                <LuBriefcase size={20} />
               </div>
 
-              <div className="flex flex-col sm:flex-row lg:flex-col gap-3 text-sm">
-                <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-white/70">
-                  <LuCalendar className="text-indigo-500" size={16} />
-                  06/2025 — 10/2025
+              <div className="group relative p-6 md:p-10 rounded-3xl md:rounded-[2.5rem] bg-white/2 border border-white/10 hover:border-indigo-500/30 hover:bg-indigo-500/1 transition-all duration-500 jellyfish-card">
+                <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-6 mb-10">
+                  <div>
+                    <h3 className="text-3xl md:text-4xl text-white font-bold mb-2 group-hover:text-indigo-400 transition-colors">
+                      {job.title}
+                    </h3>
+                    <div className="flex items-center gap-2 text-indigo-400/80 font-semibold text-lg italic">
+                      {job.company}
+                    </div>
+                  </div>
+
+                  <div className="flex flex-col sm:flex-row lg:flex-col gap-3 text-sm">
+                    <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-white/70">
+                      <LuCalendar className="text-indigo-500" size={16} />
+                      {job.dateRange}
+                    </div>
+                    <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400">
+                      {job.arrangement}
+                    </div>
+                  </div>
                 </div>
-                <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400">
-                  Full Time • Onsite
+
+                <div className="flex items-start gap-2 mb-10 text-white/40 max-w-md italic">
+                  <LuMapPin className="mt-1 shrink-0" size={18} />
+                  <p className="text-sm leading-relaxed">{job.location}</p>
                 </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  {job.highlights.map((item, idx) => (
+                    <div key={idx} className="flex gap-4 group/item">
+                      <LuCircleCheck
+                        className="shrink-0 text-indigo-500 mt-1 group-hover/item:scale-110 transition-transform"
+                        size={20}
+                      />
+                      <p className="text-white/60 leading-relaxed text-base md:text-lg">
+                        {item}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="absolute bottom-0 right-10 w-32 h-1 bg-linear-to-r from-transparent via-indigo-500/50 to-transparent blur-sm" />
               </div>
             </div>
-
-            {/* Location */}
-            <div className="flex items-start gap-2 mb-10 text-white/40 max-w-md italic">
-              <LuMapPin className="mt-1 shrink-0" size={18} />
-              <p className="text-sm leading-relaxed">
-                H-14, Main Road, Block - A, Banasree, Rampura, Dhaka-1219
-              </p>
-            </div>
-
-            {/* Responsibilities Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {[
-                "Designed scalable REST APIs using Node.js, Nest.js, Express.js TypeScript, Prisma & PostgreSQL",
-                "Implemented secure RBAC and JWT-based authentication systems",
-                "Integrated Stripe & PayPal for safe real-time payment processing",
-                "Optimized asset storage using AWS S3 cloud infrastructure",
-                "Configured Nginx Reverse Proxies and PM2 for production VPS deployment",
-                "Managed DNS, SSL certificates, and Domain configurations",
-              ].map((item, idx) => (
-                <div key={idx} className="flex gap-4 group/item">
-                  <LuCircleCheck
-                    className="shrink-0 text-indigo-500 mt-1 group-hover/item:scale-110 transition-transform"
-                    size={20}
-                  />
-                  <p className="text-white/60 leading-relaxed text-base md:text-lg">
-                    {item}
-                  </p>
-                </div>
-              ))}
-            </div>
-
-            {/* Subtle Gradient Accent */}
-            <div className="absolute bottom-0 right-10 w-32 h-1 bg-linear-to-r from-transparent via-indigo-500/50 to-transparent blur-sm" />
-          </div>
+          ))}
         </div>
       </div>
     </section>
