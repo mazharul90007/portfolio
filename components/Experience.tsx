@@ -23,7 +23,7 @@ const experiences = [
   {
     title: "Backend Developer",
     company: "SM Technology",
-    dateRange: "06/2025 — 10/2025",
+    dateRange: "06/2025 — 12/2025",
     arrangement: "Full Time • Onsite",
     location: "H-14, Main Road, Block - A, Banasree, Rampura, Dhaka-1219",
     highlights: [
