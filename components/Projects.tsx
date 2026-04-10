@@ -9,33 +9,7 @@ const projects = [
   {
     id: 1,
     image:
-      "https://res.cloudinary.com/dp6urj3gj/image/upload/v1772129904/chemist-bd-ss_jsqzwm.png",
-    name: "Chemist BD",
-    type: "Ecommerce Website",
-    description:
-      "CHEMIST BD is a modern, responsive e-commerce frontend designed for pharmacies. It provides a seamless experience for customers to browse medicines, manage their cart, and place orders, while offering powerful dashboards for sellers and administrators.",
-    liveLink: "https://chemistbd-client.vercel.app",
-    githubClient: "https://github.com/mazharul90007/chemist-bd",
-    githubServer: "https://github.com/mazharul90007/chemist-bd-server",
-    color: "#10b981",
-    bgClass:
-      "bg-[radial-gradient(ellipse_at_top_right,rgba(16,185,129,0.1),transparent_70%)]",
-    tags: [
-      "Next.js 15",
-      "Zustand",
-      "TanStack",
-      "ShadcnUI",
-      "Express.js",
-      "Better Auth",
-      "PostgreSQL",
-      "Prisma",
-      "TypeScript",
-    ],
-  },
-  {
-    id: 2,
-    image:
-      "https://res.cloudinary.com/dp6urj3gj/image/upload/v1772490207/quick-hire-ss_sarodt.png",
+      "https://res.cloudinary.com/dp6urj3gj/image/upload/v1775848480/quick-hire2_r67zzw.png",
     name: "Quick Hire",
     type: "Job portal Application",
     description:
@@ -57,10 +31,61 @@ const projects = [
       "PostgreSQL",
       "Prisma",
       "TypeScript",
+      "Stripe",
+    ],
+  },
+  {
+    id: 2,
+    image:
+      "https://res.cloudinary.com/dp6urj3gj/image/upload/v1775848517/chaka-ride_ha1ueo.png",
+    name: "Chaka Ride",
+    type: "Car rental platform",
+    description:
+      "Chaka Ride: A modern car rental platform built with Next.js, featuring a clean UI, high-performance architecture, and bilingual support in English and Bangla.",
+    liveLink: "https://chaka-ride.vercel.app/en",
+    githubClient: "https://github.com/mazharul90007/chaka_ride",
+    githubServer: "https://github.com/mazharul90007/chaka_ride",
+    color: "#3b82f6",
+    bgClass:
+      "bg-[radial-gradient(ellipse_at_bottom_left,rgba(59,130,246,0.1),transparent_70%)]",
+    tags: [
+      "Next.js 16",
+      "TypeScript",
+      "Tanstack Query",
+      "Framer motion",
+      "Tailwind Css",
+      "Zustand",
+      "Axios",
     ],
   },
   {
     id: 3,
+    image:
+      "https://res.cloudinary.com/dp6urj3gj/image/upload/v1772129904/chemist-bd-ss_jsqzwm.png",
+    name: "Chemist BD",
+    type: "Ecommerce Website",
+    description:
+      "CHEMIST BD is a modern, responsive e-commerce frontend designed for pharmacies. It provides a seamless experience for customers to browse medicines, manage their cart, and place orders, while offering powerful dashboards for sellers and administrators.",
+    liveLink: "https://chemistbd-client.vercel.app",
+    githubClient: "https://github.com/mazharul90007/chemist-bd",
+    githubServer: "https://github.com/mazharul90007/chemist-bd-server",
+    color: "#10b981",
+    bgClass:
+      "bg-linear-to-tl from-emerald-500/[0.12] via-teal-500/[0.04] to-transparent",
+    tags: [
+      "Next.js 15",
+      "Zustand",
+      "TanStack",
+      "ShadcnUI",
+      "Express.js",
+      "Better Auth",
+      "PostgreSQL",
+      "Prisma",
+      "TypeScript",
+    ],
+  },
+  {
+    id: 4,
     image:
       "https://res.cloudinary.com/dp6urj3gj/image/upload/v1769278587/workboard_j5hlmt.png",
     name: "Work Board",
@@ -70,9 +95,9 @@ const projects = [
     liveLink: "https://workboard-client.vercel.app/",
     githubClient: "https://github.com/mazharul90007/work-board-client",
     githubServer: "https://github.com/mazharul90007/workboard-server-nestjs",
-    color: "#10b981",
+    color: "#f59e0b",
     bgClass:
-      "bg-[radial-gradient(ellipse_at_top_right,rgba(16,185,129,0.1),transparent_70%)]",
+      "bg-[radial-gradient(ellipse_at_top_right,rgba(245,158,11,0.12),transparent_68%)]",
     tags: [
       "Next.js 15",
       "Zustand",
@@ -84,7 +109,7 @@ const projects = [
     ],
   },
   {
-    id: 4,
+    id: 5,
     image:
       "https://res.cloudinary.com/dp6urj3gj/image/upload/v1765627636/bd-destinationERD_pftztz.png",
     name: "BD-DESTINATION",
@@ -93,27 +118,11 @@ const projects = [
       "A travel guide platform built with Node.js and Express, offering comprehensive information about beautiful tourist destinations in Bangladesh.",
     liveLink: "https://bd-destination.vercel.app",
     githubServer: "https://github.com/mazharul90007/bd-destination",
-    color: "#6366f1",
+    color: "#a855f7",
     bgClass:
-      "bg-linear-to-br from-indigo-500/[0.1] via-purple-500/[0.03] to-transparent",
+      "bg-[radial-gradient(ellipse_at_bottom_right,rgba(168,85,247,0.11),transparent_72%)]",
     tags: ["Node.js", "Express", "TypeScript", "PostgreSQL", "Prisma", "Zod"],
   },
-  // {
-  //   id: 4,
-  //   image:
-  //     "https://res.cloudinary.com/dp6urj3gj/image/upload/v1766114389/EzyTicket_jg6den.webp",
-  //   name: "Ezy Ticket",
-  //   type: "Online Ticket Booking Website",
-  //   description:
-  //     "EzyTicket is an online ticket booking platform with secure payments, role-based dashboards, and full CRUD functionality.",
-  //   liveLink: "https://ezyticket-7198b.web.app/",
-  //   githubClient: "https://github.com/mazharul90007/ezyTicket-client",
-  //   githubServer: "https://github.com/mazharul90007/ezyTicket-server-2",
-  //   color: "#3b82f6",
-  //   bgClass:
-  //     "bg-[radial-gradient(ellipse_at_bottom_left,rgba(59,130,246,0.1),transparent_70%)]",
-  //   tags: ["React", "TypeScript", "Firebase", "Node.js", "MongoDB", "Stripe"],
-  // },
 ];
 
 function Projects() {
