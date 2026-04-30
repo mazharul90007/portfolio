@@ -1,6 +1,6 @@
 <div align="center">
   
-<img src="https://res.cloudinary.com/dycrowzen/image/upload/v1777539721/portfolio_logo_qs72ss.png" alt="Sourabh's Personal Portfolio Logo" width="300" height="75" />
+<img src="https://res.cloudinary.com/dycrowzen/image/upload/v1777539721/portfolio_logo_qs72ss.png" alt="Sourabh's Personal Portfolio Logo" width="280" height="75" />
 <br />
 
 [![Live URL](https://img.shields.io/badge/Live_Site-misourabh.com-blue?style=for-the-badge&logo=vercel)](https://misourabh.com)
