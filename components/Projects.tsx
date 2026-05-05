@@ -61,7 +61,7 @@ const projects = [
   {
     id: 3,
     image:
-      "https://res.cloudinary.com/dp6urj3gj/image/upload/v1772129904/chemist-bd-ss_jsqzwm.png",
+      "https://res.cloudinary.com/dp6urj3gj/image/upload/v1777989355/chemistbd_mkl5ch.png",
     name: "Chemist BD",
     type: "Ecommerce Website",
     description:
@@ -108,21 +108,21 @@ const projects = [
       "TypeScript",
     ],
   },
-  {
-    id: 5,
-    image:
-      "https://res.cloudinary.com/dp6urj3gj/image/upload/v1765627636/bd-destinationERD_pftztz.png",
-    name: "BD-DESTINATION",
-    type: "Travel Information Guide",
-    description:
-      "A travel guide platform built with Node.js and Express, offering comprehensive information about beautiful tourist destinations in Bangladesh.",
-    liveLink: "https://bd-destination.vercel.app",
-    githubServer: "https://github.com/mazharul90007/bd-destination",
-    color: "#a855f7",
-    bgClass:
-      "bg-[radial-gradient(ellipse_at_bottom_right,rgba(168,85,247,0.11),transparent_72%)]",
-    tags: ["Node.js", "Express", "TypeScript", "PostgreSQL", "Prisma", "Zod"],
-  },
+  // {
+  //   id: 5,
+  //   image:
+  //     "https://res.cloudinary.com/dp6urj3gj/image/upload/v1765627636/bd-destinationERD_pftztz.png",
+  //   name: "BD-DESTINATION",
+  //   type: "Travel Information Guide",
+  //   description:
+  //     "A travel guide platform built with Node.js and Express, offering comprehensive information about beautiful tourist destinations in Bangladesh.",
+  //   liveLink: "https://bd-destination.vercel.app",
+  //   githubServer: "https://github.com/mazharul90007/bd-destination",
+  //   color: "#a855f7",
+  //   bgClass:
+  //     "bg-[radial-gradient(ellipse_at_bottom_right,rgba(168,85,247,0.11),transparent_72%)]",
+  //   tags: ["Node.js", "Express", "TypeScript", "PostgreSQL", "Prisma", "Zod"],
+  // },
 ];
 
 function Projects() {
