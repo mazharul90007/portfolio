@@ -32,6 +32,7 @@ import {
   SiHyperskill,
   SiNestjs,
   SiSwagger,
+  SiOpenai,
 } from "react-icons/si";
 import { BiLogoVisualStudio, BiCheck } from "react-icons/bi";
 import {
@@ -43,6 +44,7 @@ import { RiBearSmileFill } from "react-icons/ri";
 import { MdDesignServices } from "react-icons/md";
 import { IconType } from "react-icons/lib";
 import { TfiAndroid } from "react-icons/tfi";
+import { DiRedis } from "react-icons/di";
 
 const frontendTech = [
   { name: "Next.js", icon: SiNextdotjs, color: "#ffffff" },
@@ -64,14 +66,16 @@ const frontendTech = [
 const backendTech = [
   { name: "Node.js", icon: FaNodeJs, color: "#339933" },
   { name: "Nest.js", icon: SiNestjs, color: "#E0234E" },
+  { name: "Express", icon: SiExpress, color: "#ffffff" },
   { name: "PostgreSQL", icon: SiPostgresql, color: "#4169E1" },
   { name: "Prisma", icon: SiPrisma, color: "#ffffff" },
   { name: "Mongoose", icon: SiMongoose, color: "#880000" },
-  { name: "Express", icon: SiExpress, color: "#ffffff" },
   { name: "MongoDB", icon: SiMongodb, color: "#47A248" },
   { name: "JWT", icon: SiJsonwebtokens, color: "#ffffff" },
   { name: "Zod", icon: SiZod, color: "#3E67B1" },
   { name: "AWS", icon: FaAws, color: "#FF9900" },
+  { name: "RAG", icon: SiOpenai, color: "#3E67B1" },
+  { name: "Redis", icon: DiRedis, color: "#FF9900" },
 ];
 
 const designTech = [

@@ -2,7 +2,7 @@
 import { LuMapPin, LuMail, LuPhone, LuCalendar } from "react-icons/lu";
 
 const aboutData = [
-  { label: "Age", value: "28", icon: LuCalendar },
+  { label: "Age", value: "29", icon: LuCalendar },
   { label: "Residence", value: "Bangladesh", icon: LuMapPin },
   { label: "Email", value: "mazharul90007@gmail.com", icon: LuMail },
   { label: "Phone", value: "+880 1939562168", icon: LuPhone },
@@ -62,10 +62,10 @@ const AboutMe = () => {
                 <item.icon size={20} />
               </div>
               <div>
-                <p className="text-white/30 text-[10px] uppercase tracking-[0.2em] font-bold mb-1">
+                <p className="text-white/30 text-xs uppercase tracking-[0.2em] font-bold mb-1">
                   {item.label}
                 </p>
-                <p className="text-white/90 font-medium text-sm truncate">
+                <p className="text-white/90 font-medium text-base truncate">
                   {item.value}
                 </p>
               </div>

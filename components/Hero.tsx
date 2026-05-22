@@ -12,15 +12,15 @@ const Hero = () => {
       <div className="absolute -top-20 -left-10 w-72 h-72 bg-blue-600/10 blur-[120px] rounded-full" />
       <div className="absolute bottom-0 right-0 w-72 h-72 bg-purple-600/10 blur-[120px] rounded-full" />
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12 pt-20 pb-8 md:pt-28 md:pb-12">
-        <div className="flex-1 z-10 text-center md:text-left space-y-8">
+        <div className="flex-1 z-10 text-center md:text-left space-y-10">
           {/* Availability Badge */}
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs md:text-sm font-medium mb-6">
+          {/* <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs md:text-sm font-medium mb-6">
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-indigo-500"></span>
             </span>
             Available for Projects
-          </div>
+          </div> */}
 
           <h1 className="text-5xl md:text-8xl font-bold tracking-tighter leading-none text-white">
             Hello! I&apos;m <br />

@@ -9,7 +9,35 @@ const projects = [
   {
     id: 1,
     image:
-      "https://res.cloudinary.com/dp6urj3gj/image/upload/v1775848480/quick-hire2_r67zzw.png",
+      "https://res.cloudinary.com/dp6urj3gj/image/upload/v1779446682/chaka-ride_whdqss.png",
+    name: "Chaka Ride",
+    type: "AI-Powered Ride-Sharing & Car Rental Platform",
+    description:
+      "A professional, production-grade ride-sharing and car rental ecosystem consisting of a decoupled Next.js frontend and a NestJS/PostgreSQL backend. Features multi-role capabilities (Passenger, Driver, Admin) and advanced AI integrations via OpenRouter. Passengers enjoy a natural-language Smart Trip Assistant for vehicle suggestions, while drivers benefit from a bidding dashboard with an AI-generated Fair Market Price estimator.",
+    liveLink: "https://chaka-ride.vercel.app/en",
+    githubClient: "https://github.com/mazharul90007/chaka_ride",
+    githubServer: "https://github.com/mazharul90007/chaka_ride_server",
+    color: "#3b82f6",
+    bgClass:
+      "bg-[radial-gradient(ellipse_at_bottom_left,rgba(59,130,246,0.1),transparent_70%)]",
+    tags: [
+      "Next.js 16",
+      "NestJS",
+      "TypeScript",
+      "OpenRouter (AI)",
+      "PostgreSQL",
+      "Prisma ORM",
+      "Better Auth",
+      "TanStack Query",
+      "Zustand",
+      "Framer Motion",
+      "Tailwind CSS",
+    ],
+  },
+  {
+    id: 2,
+    image:
+      "https://res.cloudinary.com/dp6urj3gj/image/upload/v1779446133/quick-hire_bmddaz.png",
     name: "Quick Hire",
     type: "Job portal Application",
     description:
@@ -32,30 +60,7 @@ const projects = [
       "Prisma",
       "TypeScript",
       "Stripe",
-    ],
-  },
-  {
-    id: 2,
-    image:
-      "https://res.cloudinary.com/dp6urj3gj/image/upload/v1775848517/chaka-ride_ha1ueo.png",
-    name: "Chaka Ride",
-    type: "Car rental platform",
-    description:
-      "Chaka Ride: A modern car rental platform built with Next.js, featuring a clean UI, high-performance architecture, and bilingual support in English and Bangla.",
-    liveLink: "https://chaka-ride.vercel.app/en",
-    githubClient: "https://github.com/mazharul90007/chaka_ride",
-    githubServer: "https://github.com/mazharul90007/chaka_ride",
-    color: "#3b82f6",
-    bgClass:
-      "bg-[radial-gradient(ellipse_at_bottom_left,rgba(59,130,246,0.1),transparent_70%)]",
-    tags: [
-      "Next.js 16",
-      "TypeScript",
-      "Tanstack Query",
-      "Framer motion",
-      "Tailwind Css",
-      "Zustand",
-      "Axios",
+      "RAG"
     ],
   },
   {
@@ -108,21 +113,6 @@ const projects = [
       "TypeScript",
     ],
   },
-  // {
-  //   id: 5,
-  //   image:
-  //     "https://res.cloudinary.com/dp6urj3gj/image/upload/v1765627636/bd-destinationERD_pftztz.png",
-  //   name: "BD-DESTINATION",
-  //   type: "Travel Information Guide",
-  //   description:
-  //     "A travel guide platform built with Node.js and Express, offering comprehensive information about beautiful tourist destinations in Bangladesh.",
-  //   liveLink: "https://bd-destination.vercel.app",
-  //   githubServer: "https://github.com/mazharul90007/bd-destination",
-  //   color: "#a855f7",
-  //   bgClass:
-  //     "bg-[radial-gradient(ellipse_at_bottom_right,rgba(168,85,247,0.11),transparent_72%)]",
-  //   tags: ["Node.js", "Express", "TypeScript", "PostgreSQL", "Prisma", "Zod"],
-  // },
 ];
 
 function Projects() {
@@ -164,14 +154,17 @@ function Projects() {
                   className={`w-full lg:w-7/12 relative rounded-2xl md:rounded-[2rem] border border-white/10 bg-black/40 p-2 overflow-hidden
                 ${index % 2 === 0 ? "lg:order-2" : "lg:order-1"}`}
                 >
-                  <div className="h-80 md:h-100 overflow-y-auto hide-scrollbar rounded-xl md:rounded-[1.5rem] border border-white/5 relative bg-[#0a0a0a]">
+                  <div
+                    data-lenis-prevent
+                    className="h-80 md:h-100 overflow-y-auto hide-scrollbar rounded-xl md:rounded-[1.5rem] border border-white/5 relative bg-[#0a0a0a]"
+                  >
                     <Image
                       src={project.image}
                       alt={project.name}
                       width={1400}
                       height={2000}
                       quality={95}
-                      className="w-full h-auto transition-transform duration-700 group-hover:scale-[1.02]"
+                      className="w-full h-auto"
                       priority={index === 0}
                     />
                   </div>

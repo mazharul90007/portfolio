@@ -7,7 +7,7 @@ const certData = [
     id: 1,
     title: "Next Level Web Development 3.0",
     institution: "Programming Hero (Batch-6)",
-    duration: "October 2025 — Present",
+    duration: "October 2025 — May 2026",
     address: "Online",
     color: "#6366f1",
     bgClass:
