@@ -10,14 +10,14 @@ const experiences = [
   {
     title: "Full Stack Developer",
     company: "AxentraLab",
-    dateRange: "25/03/2026 — Present",
-    arrangement: "Full Time • Hybrid",
+    dateRange: "03/01/2026 — Present",
+    arrangement: "Full Time • Remote",
     location: "Dhanmondi, Dhaka",
     highlights: [
-      "Full-time Full Stack Developer contributing across frontend and backend for AxentraLab products",
-      "Working in a hybrid model with onsite presence in Dhanmondi, Dhaka",
-      "Collaborating with the team on design, implementation, and delivery of web features",
-      "Building maintainable, user-focused solutions end to end",
+      "Developed SaaS products using modern technologies like Next.js and Nest.js, successfully integrating advanced AI-driven features.",
+      "Engineered scalable backend architectures and optimized data workflows using Node.js, PostgreSQL, Prisma, and RAG (Retrieval-Augmented Generation).",
+      "Collaborated with team members to add new features via APIs and ensure the final product can handle growth smoothly.",
+      "Built smooth mobile features using React Native, focusing on smart data saving and fast state updates so the app responds instantly without lagging.",
     ],
   },
   {
@@ -27,12 +27,10 @@ const experiences = [
     arrangement: "Full Time • Onsite",
     location: "H-14, Main Road, Block - A, Banasree, Rampura, Dhaka-1219",
     highlights: [
-      "Designed scalable REST APIs using Node.js, Nest.js, Express.js TypeScript, Prisma & PostgreSQL",
-      "Implemented secure RBAC and JWT-based authentication systems",
-      "Integrated Stripe & PayPal for safe real-time payment processing",
-      "Optimized asset storage using AWS S3 cloud infrastructure",
-      "Configured Nginx Reverse Proxies and PM2 for production VPS deployment",
-      "Managed DNS, SSL certificates, and Domain configurations",
+      "Developed SaaS products, designed and deployed scalable RESTful APIs utilizing Next.js Nest.js, Express.js, PostgreSQL, and Prisma, successfully integrating advanced AI-driven features.",
+      "Engineered cross-platform mobile features using React Native, integrating complex backend RESTful APIs to ensure real-time data sync and smooth user experiences.",
+      "Implemented robust JWT authentication and Role-Based Access Control (RBAC) to enforce strict application security.",
+      "Integrated Stripe and PayPal payment gateways alongside AWS cloud services for secure transaction processing, asset storage, and deployment.",
     ],
   },
 ];
