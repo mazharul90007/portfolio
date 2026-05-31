@@ -4,6 +4,7 @@ import Image from "next/image";
 import { FiExternalLink, FiGithub } from "react-icons/fi";
 import { HiOutlineCodeBracket } from "react-icons/hi2";
 import { BiCodeAlt } from "react-icons/bi";
+import Title from "./Title";
 
 const projects = [
   {
@@ -60,7 +61,7 @@ const projects = [
       "Prisma",
       "TypeScript",
       "Stripe",
-      "RAG"
+      "RAG",
     ],
   },
   {
@@ -124,17 +125,8 @@ function Projects() {
         <div className="absolute bottom-0 left-0 w-125 h-125 bg-blue-600/5 blur-[150px] rounded-full -z-10" />
 
         <div className="max-w-7xl mx-auto">
-          {/* Header Section */}
-          <div className="flex items-center gap-3 text-indigo-500 font-bold tracking-[0.2em] uppercase text-xs mb-6">
-            <span className="w-10 h-px bg-indigo-500"></span>
-            Projects
-          </div>
-          <h2 className="text-5xl md:text-7xl font-bold text-white mb-8 md:mb-12 tracking-tight">
-            A showcase of <br />
-            <span className="bg-linear-to-r from-blue-400 via-indigo-400 to-purple-500 bg-clip-text text-transparent">
-              my work
-            </span>
-          </h2>
+          {/* Section Header */}
+          <Title category="Projects" title1="A showcase of" title2="my work" />
 
           {/* Project Cards */}
           <div className="space-y-6">
@@ -156,7 +148,7 @@ function Projects() {
                 >
                   <div
                     data-lenis-prevent
-                    className="h-80 md:h-100 overflow-y-auto hide-scrollbar rounded-xl md:rounded-[1.5rem] border border-white/5 relative bg-[#0a0a0a]"
+                    className="h-80 md:h-120 overflow-y-auto hide-scrollbar rounded-xl md:rounded-[1.5rem] border border-white/5 relative bg-[#0a0a0a]"
                   >
                     <Image
                       src={project.image}
@@ -182,7 +174,7 @@ function Projects() {
                     {project.type}
                   </div>
 
-                  <h3 className="text-3xl md:text-4xl font-bold text-white mb-4 tracking-tight">
+                  <h3 className="text-3xl md:text-4xl font-bold text-white/90 mb-4 tracking-tight">
                     {project.name}
                   </h3>
 
@@ -208,7 +200,7 @@ function Projects() {
                       href={project.liveLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 px-6 py-3 rounded-2xl bg-white text-black font-bold text-xs uppercase tracking-widest hover:bg-indigo-500 hover:text-white transition-all duration-300 shadow-xl shadow-white/5"
+                      className="flex items-center gap-2 px-6 py-3 rounded-2xl bg-white/90 text-black font-bold text-xs uppercase tracking-widest hover:bg-indigo-500 hover:text-white transition-all duration-300 shadow-xl shadow-white/5"
                     >
                       <FiExternalLink size={16} /> Live Demo
                     </a>

@@ -6,6 +6,7 @@ import {
   LuBookOpen,
 } from "react-icons/lu";
 import { ShineBorder } from "@/components/ui/shine-border";
+import Title from "./Title";
 
 const educationData = [
   {
@@ -38,23 +39,13 @@ const Education = () => {
 
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
-        <div className="flex items-center gap-3 text-indigo-500 font-bold tracking-[0.2em] uppercase text-xs mb-6">
-          <span className="w-10 h-px bg-indigo-500"></span>
-          Education
-        </div>
-
-        <h2 className="text-5xl md:text-7xl font-bold text-white mb-8 md:mb-12 tracking-tight">
-          Academic <br />
-          <span className="bg-linear-to-r from-blue-400 via-indigo-400 to-purple-500 bg-clip-text text-transparent">
-            Foundations
-          </span>
-        </h2>
+        <Title category="Education" title1="Academic" title2="Foundations" />
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
           {educationData.map((edu, idx) => (
             <div
               key={idx}
-              className={`relative group p-6 md:p-10 rounded-3xl md:rounded-[2.5rem] bg-white/2 border border-white/10 jellyfish-card transition-all duration-700 ease-out overflow-hidden ${edu.bgClass}`}
+              className="group relative p-6 md:p-10 rounded-3xl md:rounded-[2.5rem] bg-white/2 border border-white/10 hover:border-indigo-500/30 hover:bg-indigo-500/1 transition-all duration-500 jellyfish-card"
             >
               {/* Magic Shine Effect */}
               <ShineBorder
@@ -75,7 +66,7 @@ const Education = () => {
                 </div>
 
                 {/* Degree & Institution */}
-                <h3 className="text-2xl md:text-3xl font-bold text-white mb-3 leading-tight group-hover:text-indigo-400 transition-colors">
+                <h3 className="text-2xl md:text-3xl font-bold text-white/90 mb-3 leading-tight group-hover:text-indigo-400 transition-colors duration-300">
                   {edu.degree}
                 </h3>
                 <p className="text-indigo-400/80 font-semibold mb-6 italic">

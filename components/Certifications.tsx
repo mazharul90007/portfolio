@@ -1,6 +1,7 @@
 "use client";
 import { LuAward, LuCalendar, LuMapPin, LuExternalLink } from "react-icons/lu";
 import { ShineBorder } from "@/components/ui/shine-border";
+import Title from "./Title";
 
 const certData = [
   {
@@ -10,8 +11,6 @@ const certData = [
     duration: "October 2025 — May 2026",
     address: "Online",
     color: "#6366f1",
-    bgClass:
-      "bg-linear-to-br from-indigo-500/12 via-transparent to-purple-500/6",
     isFeatured: true,
   },
   {
@@ -21,8 +20,6 @@ const certData = [
     duration: "June 2024 — Jan 2025",
     address: "Online",
     color: "#a855f7",
-    bgClass:
-      "bg-[radial-gradient(ellipse_at_top_right,rgba(168,85,247,0.12),transparent_70%)]",
     isFeatured: false,
   },
   {
@@ -32,7 +29,6 @@ const certData = [
     duration: "November 2025 — March 2026",
     address: "Online",
     color: "#6366f1",
-    bgClass: "bg-linear-to-br from-purple-500/5 via-transparent to-blue-500/7",
     isFeatured: false,
   },
   {
@@ -42,8 +38,6 @@ const certData = [
     duration: "April 2023 — June 2023",
     address: "Karwan Bazar, Dhaka",
     color: "#a855f7",
-    bgClass:
-      "bg-[radial-gradient(ellipse_at_top_right,rgba(168,85,247,0.12),transparent_70%)]",
     isFeatured: false,
   },
   {
@@ -53,8 +47,6 @@ const certData = [
     duration: "Jan 2023 — July 2023",
     address: "Mohakhali, Dhaka",
     color: "#3b82f6",
-    bgClass:
-      "bg-[radial-gradient(ellipse_at_bottom_right,rgba(59,130,246,0.12),transparent_70%)]",
     isFeatured: false,
   },
 ];
@@ -67,17 +59,11 @@ const Certifications = () => {
 
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
-        <div className="flex items-center gap-3 text-indigo-500 font-bold tracking-[0.2em] uppercase text-xs mb-6">
-          <span className="w-10 h-px bg-indigo-500"></span>
-          Credentials
-        </div>
-
-        <h2 className="text-5xl md:text-7xl font-bold text-white mb-8 md:mb-12 tracking-tight leading-tight">
-          Industry <br />
-          <span className="bg-linear-to-r from-blue-400 via-indigo-400 to-purple-500 bg-clip-text text-transparent">
-            Certifications
-          </span>
-        </h2>
+        <Title
+          category="Credentials"
+          title1="Industry"
+          title2="Certifications"
+        />
 
         {/* Bento Grid Layout */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -86,7 +72,7 @@ const Certifications = () => {
               key={idx}
               className={`relative group p-6 rounded-3xl md:rounded-[2.5rem] bg-white/2 border border-white/10 hover:border-indigo-500/40 transition-all duration-500 overflow-hidden flex flex-col justify-between jellyfish-card 
                 ${cert.isFeatured ? "lg:col-span-2" : "col-span-1"} 
-                ${cert.bgClass}`}
+               `}
             >
               {/* ShineBorder effect */}
               <ShineBorder
@@ -118,17 +104,14 @@ const Certifications = () => {
                 </div>
 
                 <h3
-                  className={`font-bold text-white mb-4 leading-tight group-hover:text-white transition-colors
+                  className={`font-bold text-white/90 mb-4 leading-tight group-hover:text-white transition-colors
                   ${cert.isFeatured ? "text-3xl md:text-4xl" : "text-xl md:text-2xl"}`}
                 >
                   {cert.title}
                 </h3>
 
-                <div className="space-y-3 mb-8">
-                  <p
-                    className="font-semibold text-md transition-colors"
-                    style={{ color: cert.color }}
-                  >
+                <div className="space-y-3 mb-4">
+                  <p className="font-semibold text-md transition-colors text-indigo-400/80">
                     {cert.institution}
                   </p>
 
@@ -140,7 +123,7 @@ const Certifications = () => {
               </div>
 
               {/* Footer */}
-              <div className="relative z-10 pt-6 border-t border-white/5 flex items-center justify-between">
+              <div className="relative z-10 pt-2 border-t border-white/5 flex items-center justify-between">
                 <div className="flex items-center gap-1.5 text-white/30 text-xs italic">
                   <LuMapPin size={12} />
                   <span>{cert.address}</span>

@@ -1,6 +1,6 @@
 "use client";
 
-import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -28,14 +28,6 @@ const Footer = () => {
             className="text-white/90 hover:text-white text-2xl"
           >
             <FaLinkedin />
-          </a>
-          <a
-            href="https://twitter.com/your-handle"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-white/90 hover:text-white text-2xl"
-          >
-            <FaTwitter />
           </a>
           <a
             href="mailto:mazharul90007@gmail.com"

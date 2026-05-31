@@ -6,6 +6,7 @@ import { FiSend } from "react-icons/fi";
 import emailjs from "@emailjs/browser";
 import Lottie from "lottie-react";
 import emailAnimation from "@/public/email.json";
+import Title from "./Title";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -54,17 +55,12 @@ const Contact = () => {
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-600/10 blur-[150px] rounded-full -z-10" />
 
       <div className="max-w-7xl mx-auto">
-        {/* Header Section */}
-        <div className="flex items-center gap-3 text-indigo-500 font-bold tracking-[0.2em] uppercase text-xs mb-6">
-          <span className="w-10 h-px bg-indigo-500"></span>
-          Connect
-        </div>
-        <h2 className="text-5xl md:text-7xl font-bold text-white mb-8 md:mb-12 tracking-tight leading-tight">
-          Let’s build something <br />
-          <span className="bg-linear-to-r from-blue-400 via-indigo-400 to-purple-500 bg-clip-text text-transparent">
-            amazing together
-          </span>
-        </h2>
+        {/* Section Header */}
+        <Title
+          category="Connect"
+          title1="Let’s build something"
+          title2="amazing together"
+        />
 
         {/* Main Contact Card */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
@@ -77,11 +73,11 @@ const Contact = () => {
                 <Lottie animationData={emailAnimation} loop={true} />
               </div>
 
-              <h3 className="text-3xl font-bold text-white mb-2 tracking-tight">
+              <h3 className="text-3xl font-bold text-white/90 mb-2 tracking-tight">
                 Mazharul Islam Sourabh
               </h3>
-              <p className="text-indigo-400 font-mono text-sm uppercase tracking-widest mb-8">
-                Full Stack Web Developer
+              <p className="text-indigo-400 font-semibold text-sm uppercase  mb-8">
+                Full Stack Web & App Developer
               </p>
 
               <div className="space-y-6 w-full">
@@ -139,7 +135,7 @@ const Contact = () => {
           <div className="lg:col-span-7 relative group p-6 md:p-10 rounded-3xl md:rounded-[3rem] bg-linear-to-br from-purple-500/8 via-transparent to-blue-500/6 overflow-hidden border border-white/15 hover:border-indigo-500/30 transition-all duration-500 jellyfish-card">
             <div className="absolute -bottom-24 -right-24 w-80 h-80 bg-purple-600/10 blur-[100px] rounded-full" />
 
-            <h3 className="text-2xl font-bold text-white mb-8 tracking-tight flex items-center gap-3">
+            <h3 className="text-2xl font-bold text-white/90 mb-8 tracking-tight flex items-center gap-3">
               <span className="w-8 h-px bg-indigo-500"></span>
               Send a Message
             </h3>

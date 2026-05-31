@@ -33,6 +33,7 @@ import {
   SiNestjs,
   SiSwagger,
   SiOpenai,
+  SiMui,
 } from "react-icons/si";
 import { BiLogoVisualStudio, BiCheck } from "react-icons/bi";
 import {
@@ -45,6 +46,8 @@ import { MdDesignServices } from "react-icons/md";
 import { IconType } from "react-icons/lib";
 import { TfiAndroid } from "react-icons/tfi";
 import { DiRedis } from "react-icons/di";
+import Title from "./Title";
+import { ShineBorder } from "./ui/shine-border";
 
 const frontendTech = [
   { name: "Next.js", icon: SiNextdotjs, color: "#ffffff" },
@@ -57,6 +60,7 @@ const frontendTech = [
   { name: "Firebase", icon: SiFirebase, color: "#FFCA28" },
   { name: "Tailwind", icon: SiTailwindcss, color: "#06B6D4" },
   { name: "Bootstrap", icon: SiBootstrap, color: "#7952B3" },
+  { name: "MaterialUI", icon: SiMui, color: "#1976D2" },
   { name: "DaisyUI", icon: SiDaisyui, color: "#1AD1A5" },
   { name: "Shadcn", icon: SiShadcnui, color: "#ffffff" },
   { name: "HTML5", icon: SiHtml5, color: "#E34F26" },
@@ -104,6 +108,17 @@ const toolTech = [
   { name: "Swagger", icon: SiSwagger, color: "#85EA2D" },
 ];
 
+const softSkills = [
+  "Problem Solving",
+  "Adaptability",
+  "Collaboration",
+  "Time Management",
+  "Critical Thinking",
+  "Creativity",
+  "Attention to Detail",
+  "Technical Communication",
+];
+
 const Skills = () => {
   const SkillIcon = ({
     icon: Icon,
@@ -140,28 +155,23 @@ const Skills = () => {
       <div className="absolute bottom-0 left-0 w-125 h-125 bg-blue-600/10 blur-[150px] rounded-full -z-10" />
 
       <div className="max-w-7xl mx-auto">
-        <div className="flex items-center gap-3 text-indigo-500 font-bold tracking-[0.2em] uppercase text-xs mb-6">
-          <span className="w-10 h-px bg-indigo-500"></span>
-          Abilities
-        </div>
-        <h2 className="text-5xl md:text-7xl font-bold text-white mb-8 md:mb-12 tracking-tight">
-          Technical <br />
-          <span className="bg-linear-to-r from-blue-400 via-indigo-400 to-purple-500 bg-clip-text text-transparent">
-            Toolbox
-          </span>
-        </h2>
+        {/* Section Header */}
+        <Title category="Abilities" title1="Technical" title2="Toolbox" />
 
         {/* ===============Card Sections============== */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
           {/* 1. Frontend - Featured Wide Card */}
-          <div className="lg:col-span-3 relative group p-6 md:p-10 rounded-3xl md:rounded-[3rem] border border-white/10 hover:border-indigo-500/40 transition-all duration-300 overflow-hidden bg-[#0a0a0a]/10 jellyfish-card">
-            {/* Eye-Catching Background Glow */}
-            <div className="absolute -top-24 -left-24 w-80 h-80 bg-blue-600/20 blur-[100px] rounded-full group-hover:bg-blue-600/30 transition-colors duration-700" />
+          <div className="lg:col-span-3 relative group p-6 md:p-10 rounded-3xl md:rounded-[3rem] border border-white/10 hover:border-indigo-500/40 transition-all duration-300 overflow-hidden  jellyfish-card">
+            {/* Magic Shine Effect */}
+            <ShineBorder
+              className="absolute inset-0 bg-transparent"
+              color="#6366f1"
+            />
 
             <div className="relative z-10">
               <div className="flex items-center gap-4 mb-12">
                 <AiOutlineCode className="text-blue-400" size={32} />
-                <h3 className="text-xl font-bold text-white tracking-widest uppercase italic">
+                <h3 className="text-xl font-bold text-white/90 tracking-widest uppercase italic">
                   Frontend Mastery
                 </h3>
               </div>
@@ -174,13 +184,17 @@ const Skills = () => {
           </div>
 
           {/* 2. Backend - Standard Card */}
-          <div className="lg:col-span-2 relative group p-6 md:p-10 rounded-3xl md:rounded-[3rem] border border-white/10 hover:border-indigo-500/40 transition-all duration-300 overflow-hidden bg-[#0a0a0a]/10 jellyfish-card">
-            <div className="absolute -bottom-24 -right-24 w-80 h-80 bg-purple-600/20 blur-[100px] rounded-full group-hover:bg-purple-600/30 transition-colors duration-700" />
+          <div className="lg:col-span-2 relative group p-6 md:p-10 rounded-3xl md:rounded-[3rem] border border-white/10 hover:border-indigo-500/40 transition-all duration-300 overflow-hidden  jellyfish-card">
+            {/* Magic Shine Effect */}
+            <ShineBorder
+              className="absolute inset-0 bg-transparent"
+              color="#6366f1"
+            />
 
             <div className="relative z-10">
               <div className="flex items-center gap-4 mb-12">
                 <AiOutlineDatabase className="text-purple-400" size={32} />
-                <h3 className="text-xl font-bold text-white tracking-widest uppercase italic">
+                <h3 className="text-xl font-bold text-white/90 tracking-widest uppercase italic">
                   Backend
                 </h3>
               </div>
@@ -193,13 +207,17 @@ const Skills = () => {
           </div>
 
           {/* 3. Design Tools - Standard Card */}
-          <div className="lg:col-span-2 relative group p-6 md:p-10 rounded-3xl md:rounded-[3rem] border border-white/10 hover:border-indigo-500/40 transition-all duration-300 overflow-hidden bg-[#0a0a0a]/10 jellyfish-card">
-            <div className="absolute -top-24 -right-24 w-64 h-64 bg-pink-600/20 blur-[80px] rounded-full" />
+          <div className="lg:col-span-2 relative group p-6 md:p-10 rounded-3xl md:rounded-[3rem] border border-white/10 hover:border-indigo-500/40 transition-all duration-300 overflow-hidden  jellyfish-card">
+            {/* Magic Shine Effect */}
+            <ShineBorder
+              className="absolute inset-0 bg-transparent"
+              color="#6366f1"
+            />
 
             <div className="relative z-10">
               <div className="flex items-center gap-4 mb-12">
                 <MdDesignServices className="text-pink-400" size={32} />
-                <h3 className="text-xl font-bold text-white tracking-widest uppercase italic">
+                <h3 className="text-xl font-bold text-white/90 tracking-widest uppercase italic">
                   Design
                 </h3>
               </div>
@@ -212,13 +230,17 @@ const Skills = () => {
           </div>
 
           {/* 4. Dev Tools - Featured Wide Card */}
-          <div className="lg:col-span-3 relative group p-6 md:p-10 rounded-3xl md:rounded-[3rem] border border-white/10 hover:border-indigo-500/40 transition-all duration-300 overflow-hidden bg-[#0a0a0a]/10 jellyfish-card">
-            <div className="absolute inset-0 bg-linear-to-r from-indigo-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+          <div className="lg:col-span-3 relative group p-6 md:p-10 rounded-3xl md:rounded-[3rem] border border-white/10 hover:border-indigo-500/40 transition-all duration-300 overflow-hidden  jellyfish-card">
+            {/* Magic Shine Effect */}
+            <ShineBorder
+              className="absolute inset-0 bg-transparent"
+              color="#6366f1"
+            />
 
             <div className="relative z-10">
               <div className="flex items-center gap-4 mb-12">
                 <AiOutlineTool className="text-indigo-400" size={32} />
-                <h3 className="text-xl font-bold text-white tracking-widest uppercase italic">
+                <h3 className="text-xl font-bold text-white/90 tracking-widest uppercase italic">
                   Workflow Tools
                 </h3>
               </div>
@@ -233,21 +255,17 @@ const Skills = () => {
 
         {/* Soft Skills Section */}
         <div className=" mt-6 group p-6 md:p-10 rounded-3xl md:rounded-[3rem] border border-white/10 hover:border-indigo-500/40 transition-all duration-300 bg-white/2 overflow-hidden relative jellyfish-card">
-          <div className="absolute -right-20 -bottom-20 w-64 h-64 bg-indigo-500/10 blur-[100px] rounded-full" />
+          {/* Magic Shine Effect */}
+          <ShineBorder
+            className="absolute inset-0 bg-transparent"
+            color="#6366f1"
+          />
           <h3 className="text-white font-bold uppercase tracking-[0.3em] text-xs mb-8 flex items-center gap-3">
             <SiHyperskill className="text-indigo-500 animate-pulse" /> Core
             Strengths
           </h3>
           <div className="flex flex-wrap gap-4">
-            {[
-              "Problem Solving",
-              "Adaptability",
-              "Collaboration",
-              "Time Management",
-              "Critical Thinking",
-              "Creativity",
-              "Attention to Detail",
-            ].map((s) => (
+            {softSkills.map((s) => (
               <div
                 key={s}
                 className="px-6 py-3 rounded-2xl bg-white/5 border border-white/10 text-white/50 text-xs font-bold uppercase tracking-widest hover:border-indigo-500/50 hover:text-indigo-400 hover:bg-indigo-500/5 transition-all cursor-default flex items-center gap-2"

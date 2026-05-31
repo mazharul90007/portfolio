@@ -5,6 +5,7 @@ import {
   LuMapPin,
   LuCircleCheck,
 } from "react-icons/lu";
+import Title from "./Title";
 
 const experiences = [
   {
@@ -43,17 +44,7 @@ const Experience = () => {
 
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
-        <div className="flex items-center gap-3 text-indigo-500 font-bold tracking-[0.2em] uppercase text-xs mb-6">
-          <span className="w-10 h-px bg-indigo-500"></span>
-          Experience
-        </div>
-
-        <h2 className="text-5xl md:text-7xl font-bold text-white mb-8 md:mb-12 tracking-tight">
-          Professional <br />
-          <span className="bg-linear-to-r from-blue-400 via-indigo-400 to-purple-500 bg-clip-text text-transparent">
-            Journey
-          </span>
-        </h2>
+        <Title category="Experience" title1="Professional" title2="Journey" />
 
         <div className="relative md:pl-12 md:border-l border-white/10 md:ml-4 flex flex-col gap-12 md:gap-16">
           {experiences.map((job) => (
@@ -63,13 +54,17 @@ const Experience = () => {
               </div>
 
               <div className="group relative p-6 md:p-10 rounded-3xl md:rounded-[2.5rem] bg-white/2 border border-white/10 hover:border-indigo-500/30 hover:bg-indigo-500/1 transition-all duration-500 jellyfish-card">
-                <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-6 mb-10">
+                <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-6 mb-6">
                   <div>
-                    <h3 className="text-3xl md:text-4xl text-white font-bold mb-2 group-hover:text-indigo-400 transition-colors">
+                    <h3 className="text-3xl md:text-4xl text-white/90 font-bold mb-2 group-hover:text-indigo-400 transition-colors">
                       {job.title}
                     </h3>
                     <div className="flex items-center gap-2 text-indigo-400/80 font-semibold text-lg italic">
                       {job.company}
+                    </div>
+                    <div className="flex items-start gap-2 text-white/40 max-w-md italic">
+                      <LuMapPin className="mt-1 shrink-0" size={18} />
+                      <p className="text-sm leading-relaxed">{job.location}</p>
                     </div>
                   </div>
 
@@ -82,11 +77,6 @@ const Experience = () => {
                       {job.arrangement}
                     </div>
                   </div>
-                </div>
-
-                <div className="flex items-start gap-2 mb-10 text-white/40 max-w-md italic">
-                  <LuMapPin className="mt-1 shrink-0" size={18} />
-                  <p className="text-sm leading-relaxed">{job.location}</p>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

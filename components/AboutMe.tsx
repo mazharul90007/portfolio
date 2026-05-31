@@ -1,5 +1,6 @@
 "use client";
 import { LuMapPin, LuMail, LuPhone, LuCalendar } from "react-icons/lu";
+import Title from "./Title";
 
 const aboutData = [
   { label: "Age", value: "29", icon: LuCalendar },
@@ -17,17 +18,11 @@ const AboutMe = () => {
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
         {/* Left Side: Story & Narrative */}
         <div className="lg:col-span-7">
-          <div className="flex items-center gap-3 text-indigo-500 font-bold tracking-[0.2em] uppercase text-xs mb-6">
-            <span className="w-10 h-px bg-indigo-500"></span>
-            About Me
-          </div>
-
-          <h2 className="text-5xl md:text-7xl font-bold text-white mb-8 tracking-tight">
-            Passionate <br />
-            <span className="bg-linear-to-r from-blue-400 via-indigo-400 to-purple-500 bg-clip-text text-transparent">
-              Full Stack Developer
-            </span>
-          </h2>
+          <Title
+            category="About me"
+            title1="Passionate"
+            title2="Full Stack Developer"
+          />
 
           <div className="space-y-6 text-white/50 text-lg md:text-xl leading-relaxed">
             <p>
