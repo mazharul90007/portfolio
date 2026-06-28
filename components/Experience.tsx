@@ -9,9 +9,22 @@ import Title from "./Title";
 
 const experiences = [
   {
+    title: "Software Engineer",
+    company: "ANA Soft",
+    dateRange: "14/06/2026 — Present",
+    arrangement: "Full Time • Onsite",
+    location: "Banasree, Dhaka",
+    highlights: [
+      "Developing Mobile app and Web using modern technologies like Next.js and Nest.js, and React Native.",
+      "Collaborated with team members to add new features via APIs and ensure the final product can handle growth smoothly.",
+      "Building smooth mobile features using React Native for both ios and android devices and integrating advanced AI-driven features",
+      "focusing on smart data saving and fast state updates so the app responds instantly without lagging.",
+    ],
+  },
+  {
     title: "Full Stack Developer",
     company: "AxentraLab",
-    dateRange: "03/01/2026 — Present",
+    dateRange: "03/01/2026 — 31/05/2026",
     arrangement: "Full Time • Remote",
     location: "Dhanmondi, Dhaka",
     highlights: [
