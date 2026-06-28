@@ -90,30 +90,30 @@ const projects = [
       "TypeScript",
     ],
   },
-  {
-    id: 4,
-    image:
-      "https://res.cloudinary.com/dp6urj3gj/image/upload/v1769278587/workboard_j5hlmt.png",
-    name: "Work Board",
-    type: "Task Management Website",
-    description:
-      "WORK BOARD is a task management platform supporting user and assigned task management using modern frontend and backend technologies.",
-    liveLink: "https://workboard-client.vercel.app/",
-    githubClient: "https://github.com/mazharul90007/work-board-client",
-    githubServer: "https://github.com/mazharul90007/workboard-server-nestjs",
-    color: "#f59e0b",
-    bgClass:
-      "bg-[radial-gradient(ellipse_at_top_right,rgba(245,158,11,0.12),transparent_68%)]",
-    tags: [
-      "Next.js 15",
-      "Zustand",
-      "TanStack",
-      "Nest.js",
-      "PostgreSQL",
-      "Prisma",
-      "TypeScript",
-    ],
-  },
+  // {
+  //   id: 4,
+  //   image:
+  //     "https://res.cloudinary.com/dp6urj3gj/image/upload/v1769278587/workboard_j5hlmt.png",
+  //   name: "Work Board",
+  //   type: "Task Management Website",
+  //   description:
+  //     "WORK BOARD is a task management platform supporting user and assigned task management using modern frontend and backend technologies.",
+  //   liveLink: "https://workboard-client.vercel.app/",
+  //   githubClient: "https://github.com/mazharul90007/work-board-client",
+  //   githubServer: "https://github.com/mazharul90007/workboard-server-nestjs",
+  //   color: "#f59e0b",
+  //   bgClass:
+  //     "bg-[radial-gradient(ellipse_at_top_right,rgba(245,158,11,0.12),transparent_68%)]",
+  //   tags: [
+  //     "Next.js 15",
+  //     "Zustand",
+  //     "TanStack",
+  //     "Nest.js",
+  //     "PostgreSQL",
+  //     "Prisma",
+  //     "TypeScript",
+  //   ],
+  // },
 ];
 
 function Projects() {
